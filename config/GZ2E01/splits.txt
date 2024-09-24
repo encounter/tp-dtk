@@ -19,15 +19,15 @@ m_Do_main.o:
 	.rodata     start:0x803739A0 end:0x80373CB0
 	.data       start:0x803A2EE0 end:0x803A2F40
 	.bss        start:0x803D32E0 end:0x803DB740
-	.sdata      start:0x80450584 end:0x80450590
-	.sbss       start:0x80450B08 end:0x80450BA0
+	.sdata      start:0x80450580 end:0x80450590
+	.sbss       start:0x80450B00 end:0x80450B98
 	.sdata2     start:0x80451A00 end:0x80451A20
 
 m_Do_printf.o:
 	.text       start:0x80006798 end:0x80006FB4
 	.rodata     start:0x80373CB0 end:0x80373D68
 	.bss        start:0x803DB740 end:0x803DBF40
-	.sbss       start:0x80450BA0 end:0x80450BBC
+	.sbss       start:0x80450B98 end:0x80450BB8
 
 m_Do_audio.o:
 	.text       start:0x80006FB4 end:0x80007954
@@ -35,7 +35,7 @@ m_Do_audio.o:
 	.rodata     start:0x80373D68 end:0x80373DD0
 	.data       start:0x803A2F40 end:0x803A2F60
 	.bss        start:0x803DBF40 end:0x803DD2D8
-	.sbss       start:0x80450BBC end:0x80450BC8
+	.sbss       start:0x80450BB8 end:0x80450BC8
 
 m_Do_controller_pad.o:
 	.text       start:0x80007954 end:0x80007D9C
@@ -48,7 +48,7 @@ m_Do_graphic.o:
 	.rodata     start:0x80373DD0 end:0x80373DE8
 	.bss        start:0x803DD3E8 end:0x803DD470
 	.sdata      start:0x80450590 end:0x804505A0
-	.sbss       start:0x80450BC8 end:0x80450BF4
+	.sbss       start:0x80450BC8 end:0x80450BF0
 	.sdata2     start:0x80451A38 end:0x80451B00
 	.sbss2      start:0x80456B60 end:0x80456B68
 
@@ -57,7 +57,7 @@ m_Do_machine.o:
 	.rodata     start:0x80373DE8 end:0x803740C0
 	.data       start:0x803A2F60 end:0x803A2FD8
 	.sdata      start:0x804505A0 end:0x804505A8
-	.sbss       start:0x80450BF4 end:0x80450C18
+	.sbss       start:0x80450BF0 end:0x80450C18
 	.sdata2     start:0x80451B00 end:0x80451B08
 
 m_Do_mtx.o:
@@ -85,7 +85,8 @@ m_Do_lib.o:
 	.sdata2     start:0x80451B70 end:0x80451BA8
 
 m_Do_Reset.o:
-	.text       start:0x800155D8 end:0x800157FC
+	.text       start:0x800155D8 end:0x800157F4
+	.text       start:0x800157F4 end:0x800157FC
 	.rodata     start:0x80374198 end:0x803741A8
 	.sbss       start:0x80450C78 end:0x80450C90
 
@@ -115,22 +116,23 @@ m_Do_MemCardRWmng.o:
 m_Do_machine_exception.o:
 	.text       start:0x80017D7C end:0x8001817C
 	.rodata     start:0x80374460 end:0x80374640
-	.sbss       start:0x80450C90 end:0x80450CA4
+	.sbss       start:0x80450C90 end:0x80450C98
 
 c_damagereaction.o:
 	.text       start:0x8001817C end:0x800183DC
 	.ctors      start:0x803737E0 end:0x803737E4
 	.data       start:0x803A3568 end:0x803A3590
 	.bss        start:0x803F0F40 end:0x803F0F50
-	.sbss       start:0x80450CA4 end:0x80450CAC
+	.sbss       start:0x80450C98 end:0x80450CA8
 	.sdata2     start:0x80451BA8 end:0x80451BC0
 
 c_dylink.o:
-	.text       start:0x800183DC end:0x80018944
+	.text       start:0x800183DC end:0x800188DC
+	.text       start:0x800188DC end:0x80018944
 	.rodata     start:0x80374640 end:0x80378878
 	.data       start:0x803A3590 end:0x803A35A0
 	.bss        start:0x803F0F50 end:0x803F1BB0
-	.sbss       start:0x80450CAC end:0x80450CB8
+	.sbss       start:0x80450CA8 end:0x80450CB8
 
 f_ap_game.o:
 	.text       start:0x80018944 end:0x80018B64
@@ -143,7 +145,7 @@ f_op_actor.o:
 	.text       start:0x80018B64 end:0x800197BC
 	.rodata     start:0x80378878 end:0x80378880
 	.data       start:0x803A35B0 end:0x803A35E0
-	.sbss       start:0x80450CB8 end:0x80450CCC
+	.sbss       start:0x80450CB8 end:0x80450CC8
 	.sdata2     start:0x80451BC8 end:0x80451C00
 
 f_op_actor_iter.o:
@@ -154,16 +156,17 @@ f_op_actor_tag.o:
 	.data       start:0x803A35E0 end:0x803A35F0
 
 f_op_actor_mng.o:
-	.text       start:0x800198A4 end:0x8001E140
+	.text       start:0x800198A4 end:0x8001E0D4
+	.text       start:0x8001E0D4 end:0x8001E11C
 	.ctors      start:0x803737E8 end:0x803737EC
 	.rodata     start:0x80378880 end:0x80378A50
 	.data       start:0x803A35F0 end:0x803A3860
 	.bss        start:0x803F1C00 end:0x803F1DD8
-	.sbss       start:0x80450CCC end:0x80450CE0
+	.sbss       start:0x80450CC8 end:0x80450CE0
 	.sdata2     start:0x80451C00 end:0x80451C68
 
 f_op_camera.o:
-	.text       start:0x8001E140 end:0x8001E308
+	.text       start:0x8001E11C end:0x8001E308
 	.data       start:0x803A3860 end:0x803A3878
 
 f_op_camera_mng.o:
@@ -278,7 +281,7 @@ f_pc_layer.o:
 f_pc_leaf.o:
 	.text       start:0x80021A00 end:0x80021B88
 	.data       start:0x803A39E8 end:0x803A3A00
-	.sbss       start:0x80450D30 end:0x80450D40
+	.sbss       start:0x80450D30 end:0x80450D38
 
 f_pc_layer_iter.o:
 	.text       start:0x80021B88 end:0x80021CD4
@@ -298,6 +301,7 @@ f_pc_load.o:
 f_pc_manager.o:
 	.text       start:0x800220A0 end:0x80022428
 	.bss        start:0x803F4DB0 end:0x803F4E58
+	.sbss       start:0x80450D38 end:0x80450D40
 
 f_pc_method.o:
 	.text       start:0x80022428 end:0x800224F0
@@ -361,7 +365,10 @@ d_stage.o:
 	.sdata2     start:0x80451C90 end:0x80451CA0
 
 d_map.o:
-	.text       start:0x800284BC end:0x8002B1DC
+	.text       start:0x800284BC end:0x8002ABF0
+	.text       start:0x8002ABF0 end:0x8002ADB0
+	.text       start:0x8002ADB0 end:0x8002B008
+	.text       start:0x8002B008 end:0x8002B1DC
 	.rodata     start:0x80378E48 end:0x80378F38
 	.data       start:0x803A6F08 end:0x803A71B8
 	.sdata      start:0x804505F8 end:0x80450600
@@ -394,7 +401,7 @@ d_bomb.o:
 d_lib.o:
 	.text       start:0x80032044 end:0x80032918
 	.data       start:0x803A7240 end:0x803A7270
-	.sbss       start:0x80450DD8 end:0x80450DF8
+	.sbss       start:0x80450DD8 end:0x80450DF0
 
 d_save.o:
 	.text       start:0x80032918 end:0x80035C88
@@ -414,6 +421,7 @@ d_a_obj.o:
 	.text       start:0x80037038 end:0x80037A5C
 	.rodata     start:0x80379298 end:0x803792B0
 	.bss        start:0x804245E8 end:0x80424648
+	.sbss       start:0x80450DF0 end:0x80450DF8
 	.sdata2     start:0x80451D98 end:0x80451DB0
 
 d_a_itembase_static.o:
@@ -437,7 +445,7 @@ d_demo.o:
 	.data       start:0x803A7910 end:0x803A7C18
 	.bss        start:0x80424648 end:0x80424678
 	.sdata      start:0x80450620 end:0x80450628
-	.sbss       start:0x80450E00 end:0x80450E5C
+	.sbss       start:0x80450E00 end:0x80450E58
 	.sdata2     start:0x80451DB0 end:0x80451DF0
 
 d_door_param2.o:
@@ -469,7 +477,7 @@ d_map_path_dmap.o:
 	.rodata     start:0x80379C58 end:0x80379D80
 	.data       start:0x803A7D80 end:0x803A7F78
 	.sdata      start:0x80450630 end:0x80450640
-	.sbss       start:0x80450E5C end:0x80450E90
+	.sbss       start:0x80450E58 end:0x80450E90
 	.sdata2     start:0x80451E28 end:0x80451EC0
 
 d_event.o:
@@ -509,7 +517,7 @@ d_particle.o:
 	.rodata     start:0x8037A108 end:0x8037A178
 	.data       start:0x803A8308 end:0x803A85D0
 	.bss        start:0x80424710 end:0x804248D0
-	.sbss       start:0x80450E90 end:0x80450ED4
+	.sbss       start:0x80450E90 end:0x80450ED0
 	.sdata2     start:0x80451F40 end:0x80451FF8
 
 d_particle_name.o:
@@ -532,7 +540,7 @@ d_drawlist.o:
 	.data       start:0x803A87A0 end:0x803A8E98
 	.bss        start:0x804248D0 end:0x80424938
 	.sdata      start:0x80450648 end:0x80450660
-	.sbss       start:0x80450ED4 end:0x80450EE8
+	.sbss       start:0x80450ED0 end:0x80450EE0
 	.sdata2     start:0x80452008 end:0x804520E0
 	.sbss2      start:0x80456B68 end:0x80456B70
 
@@ -546,6 +554,7 @@ d_kankyo_wether.o:
 	.rodata     start:0x8037A368 end:0x8037A4C0
 	.data       start:0x803A9AC0 end:0x803A9BA0
 	.bss        start:0x80424938 end:0x80424950
+	.sbss       start:0x80450EE0 end:0x80450EE8
 	.sdata2     start:0x804520E0 end:0x804521B0
 
 d_kankyo_rain.o:
@@ -561,7 +570,7 @@ d_vib_pattern.o:
 
 d_vibration.o:
 	.text       start:0x8006F168 end:0x80070018
-	.sbss       start:0x80450F50 end:0x80450F60
+	.sbss       start:0x80450F50 end:0x80450F58
 	.sdata2     start:0x80452620 end:0x80452628
 
 d_attention.o:
@@ -571,6 +580,7 @@ d_attention.o:
 	.data       start:0x803A9BF8 end:0x803A9C70
 	.bss        start:0x80424B00 end:0x80424B20
 	.sdata      start:0x80450660 end:0x80450690
+	.sbss       start:0x80450F58 end:0x80450F60
 	.sdata2     start:0x80452628 end:0x804526B8
 
 d_att_dist.o:
@@ -585,13 +595,15 @@ d_bg_plc.o:
 d_bg_s.o:
 	.text       start:0x800740F4 end:0x80075EAC
 	.data       start:0x803AB608 end:0x803AB640
-	.sbss       start:0x80450F60 end:0x80450F70
+	.sbss       start:0x80450F60 end:0x80450F68
 	.sdata2     start:0x804526B8 end:0x804526C0
 
 d_bg_s_acch.o:
-	.text       start:0x80075EAC end:0x8007749C
+	.text       start:0x80075EAC end:0x80077494
+	.text       start:0x80077494 end:0x8007749C
 	.data       start:0x803AB640 end:0x803AB670
 	.bss        start:0x80424B20 end:0x80424B80
+	.sbss       start:0x80450F68 end:0x80450F70
 	.sdata2     start:0x804526C0 end:0x804526E8
 
 d_bg_s_chk.o:
@@ -603,7 +615,8 @@ d_bg_s_gnd_chk.o:
 	.data       start:0x803AB688 end:0x803AB7A8
 
 d_bg_s_grp_pass_chk.o:
-	.text       start:0x80077BA0 end:0x80077C68
+	.text       start:0x80077BA0 end:0x80077C20
+	.text       start:0x80077C20 end:0x80077C68
 	.data       start:0x803AB7A8 end:0x803AB7C0
 
 d_bg_s_lin_chk.o:
@@ -625,7 +638,8 @@ d_bg_s_spl_grp_chk.o:
 	.sdata2     start:0x804526E8 end:0x804526F0
 
 d_bg_s_poly_pass_chk.o:
-	.text       start:0x80078D64 end:0x80078FF4
+	.text       start:0x80078D64 end:0x80078FAC
+	.text       start:0x80078FAC end:0x80078FF4
 	.data       start:0x803ABA38 end:0x803ABA50
 
 d_bg_s_roof_chk.o:
@@ -732,7 +746,37 @@ d_error_msg.o:
 	.sbss2      start:0x80456B78 end:0x80456B80
 
 d_a_alink.o:
-	.text       start:0x8009D87C end:0x80144724
+	.text       start:0x8009D87C end:0x800C2DDC
+	.text       start:0x800C2DDC end:0x800D0D38
+	.text       start:0x800D0D38 end:0x800D6D94
+	.text       start:0x800D6D94 end:0x800DC548
+	.text       start:0x800DC548 end:0x800DE64C
+	.text       start:0x800DE64C end:0x800DFFE0
+	.text       start:0x800DFFE0 end:0x800E12E0
+	.text       start:0x800E12E0 end:0x800E23FC
+	.text       start:0x800E23FC end:0x800E3760
+	.text       start:0x800E3760 end:0x800E3830
+	.text       start:0x800E3830 end:0x800EA844
+	.text       start:0x800EA844 end:0x800EC724
+	.text       start:0x800EC724 end:0x800F3BB0
+	.text       start:0x800F3BB0 end:0x800F7C50
+	.text       start:0x800F7C50 end:0x800F9FDC
+	.text       start:0x800F9FDC end:0x80101874
+	.text       start:0x80101874 end:0x80101890
+	.text       start:0x80101890 end:0x80105A84
+	.text       start:0x80105A84 end:0x80107900
+	.text       start:0x80107900 end:0x8010D93C
+	.text       start:0x8010D93C end:0x8010E48C
+	.text       start:0x8010E48C end:0x80110654
+	.text       start:0x80110654 end:0x8011174C
+	.text       start:0x8011174C end:0x8011243C
+	.text       start:0x8011243C end:0x80115C20
+	.text       start:0x80115C20 end:0x80120580
+	.text       start:0x80120580 end:0x80126740
+	.text       start:0x80126740 end:0x8013FF28
+	.text       start:0x8013FF28 end:0x80140B88
+	.text       start:0x80140B88 end:0x80140C80
+	.text       start:0x80140C80 end:0x80144724
 	.ctors      start:0x80373818 end:0x8037381C
 	.rodata     start:0x8038D658 end:0x80392640
 	.data       start:0x803AF990 end:0x803B3610
@@ -758,7 +802,7 @@ d_a_npc.o:
 	.rodata     start:0x80392680 end:0x80392A18
 	.data       start:0x803B36A8 end:0x803B3B80
 	.bss        start:0x80425708 end:0x80425978
-	.sbss       start:0x80450FD8 end:0x80451004
+	.sbss       start:0x80450FD8 end:0x80451000
 	.sdata2     start:0x804533D8 end:0x804534B8
 
 d_a_npc_cd.o:
@@ -775,21 +819,24 @@ d_a_npc_cd2.o:
 	.rodata     start:0x80393250 end:0x80393D88
 	.data       start:0x803B61C0 end:0x803B9DA0
 	.bss        start:0x80428610 end:0x8042C8F8
-	.sbss       start:0x80451004 end:0x80451018
+	.sbss       start:0x80451000 end:0x80451010
 	.sdata2     start:0x804534E0 end:0x80453550
 
 d_a_obj_item.o:
-	.text       start:0x8015ADCC end:0x8015E010
+	.text       start:0x8015ADCC end:0x8015DED0
+	.text       start:0x8015DED0 end:0x8015DFD8
+	.text       start:0x8015DFD8 end:0x8015E010
 	.ctors      start:0x80373828 end:0x8037382C
 	.rodata     start:0x80393D88 end:0x80393D98
-	.data       start:0x803B9DA0 end:0x803BA078
+	.data       start:0x803B9DA0 end:0x803BA058
 	.sdata      start:0x804506A8 end:0x804506B0
+	.sbss       start:0x80451010 end:0x80451018
 	.sdata2     start:0x80453550 end:0x804535E0
 
 d_insect.o:
 	.text       start:0x8015E010 end:0x8015E3F8
 	.rodata     start:0x80393D98 end:0x80393DA8
-	.data       start:0x803BA078 end:0x803BA088
+	.data       start:0x803BA058 end:0x803BA088
 	.sdata2     start:0x804535E0 end:0x80453600
 
 d_a_obj_ss_base.o:
@@ -835,14 +882,16 @@ d_file_sel_warning.o:
 	.sdata2     start:0x804539D8 end:0x804539F8
 
 d_file_sel_info.o:
-	.text       start:0x80192434 end:0x80192F10
+	.text       start:0x80192434 end:0x80192EC8
+	.text       start:0x80192EC8 end:0x80192F10
 	.ctors      start:0x80373838 end:0x8037383C
 	.rodata     start:0x803948B8 end:0x80394910
 	.data       start:0x803BB498 end:0x803BB5B0
 	.sdata2     start:0x804539F8 end:0x80453A00
 
 d_bright_check.o:
-	.text       start:0x80192F10 end:0x80193690
+	.text       start:0x80192F10 end:0x80193648
+	.text       start:0x80193648 end:0x80193690
 	.ctors      start:0x8037383C end:0x80373840
 	.rodata     start:0x80394910 end:0x803949F0
 	.data       start:0x803BB5B0 end:0x803BB618
@@ -866,7 +915,7 @@ d_select_icon.o:
 	.ctors      start:0x80373844 end:0x80373848
 	.data       start:0x803BB7B8 end:0x803BB7C8
 	.bss        start:0x8042CA10 end:0x8042CA20
-	.sbss       start:0x80451050 end:0x8045105C
+	.sbss       start:0x80451050 end:0x80451058
 	.sdata2     start:0x80453A70 end:0x80453A88
 
 d_shop_camera.o:
@@ -880,12 +929,13 @@ d_shop_item_ctrl.o:
 	.sdata2     start:0x80453AD0 end:0x80453B00
 
 d_shop_system.o:
-	.text       start:0x80197098 end:0x8019ACF8
+	.text       start:0x80197098 end:0x8019ACE0
+	.text       start:0x8019ACE0 end:0x8019ACF8
 	.ctors      start:0x80373848 end:0x8037384C
 	.rodata     start:0x80394C10 end:0x80394C28
 	.data       start:0x803BB898 end:0x803BBB50
 	.sdata      start:0x804506E8 end:0x80450700
-	.sbss       start:0x8045105C end:0x80451068
+	.sbss       start:0x80451058 end:0x80451068
 	.sdata2     start:0x80453B00 end:0x80453B80
 
 d_gameover.o:
@@ -897,13 +947,14 @@ d_gameover.o:
 	.sdata2     start:0x80453B80 end:0x80453BC0
 
 d_kankyo.o:
-	.text       start:0x8019C388 end:0x801ADD38
+	.text       start:0x8019C388 end:0x801ADD00
+	.text       start:0x801ADD00 end:0x801ADD38
 	.ctors      start:0x80373850 end:0x80373854
 	.rodata     start:0x80394C60 end:0x80394F38
 	.data       start:0x803BBDB8 end:0x803BC158
 	.bss        start:0x8042CA48 end:0x8042E7F0
 	.sdata      start:0x80450700 end:0x80450720
-	.sbss       start:0x80451068 end:0x80451078
+	.sbss       start:0x80451068 end:0x80451070
 	.sdata2     start:0x80453BC0 end:0x80453E58
 
 d_kyeff.o:
@@ -921,6 +972,7 @@ d_ky_thunder.o:
 	.rodata     start:0x80394F40 end:0x80394F50
 	.data       start:0x803BC1D8 end:0x803BC218
 	.bss        start:0x8042E7F0 end:0x8042E820
+	.sbss       start:0x80451070 end:0x80451078
 	.sdata2     start:0x80453E70 end:0x80453EF8
 
 d_kantera_icon_meter.o:
@@ -955,7 +1007,7 @@ d_menu_dmap.o:
 d_menu_dmap_map.o:
 	.text       start:0x801C084C end:0x801C2718
 	.ctors      start:0x80373860 end:0x80373864
-	.rodata     start:0x80395860 end:0x803959C0
+	.rodata     start:0x80395860 end:0x803959C0 align:32
 	.data       start:0x803BCB60 end:0x803BCF18
 	.sbss       start:0x80451088 end:0x804510A0
 	.sdata2     start:0x80454060 end:0x804540D8
@@ -1032,7 +1084,8 @@ d_menu_ring.o:
 	.sdata2     start:0x80454388 end:0x80454438
 
 d_menu_save.o:
-	.text       start:0x801EF654 end:0x801F7224
+	.text       start:0x801EF654 end:0x801F6B44
+	.text       start:0x801F6B44 end:0x801F7224
 	.ctors      start:0x80373880 end:0x80373884
 	.rodata     start:0x80397960 end:0x80397A18
 	.data       start:0x803BDF78 end:0x803BE7D8
@@ -1063,7 +1116,8 @@ d_menu_window.o:
 	.sbss2      start:0x80456B88 end:0x80456B90
 
 d_meter_HIO.o:
-	.text       start:0x801FE330 end:0x80201328
+	.text       start:0x801FE330 end:0x80200D58
+	.text       start:0x80200D58 end:0x80201328
 	.ctors      start:0x80373890 end:0x80373894
 	.rodata     start:0x80397E50 end:0x80398048
 	.data       start:0x803BF0E8 end:0x803BF1A8
@@ -1152,7 +1206,7 @@ d_msg_unit.o:
 	.rodata     start:0x803996E8 end:0x80399708
 	.data       start:0x803C0BF0 end:0x803C0C00
 	.bss        start:0x804306B8 end:0x804306C8
-	.sbss       start:0x804510D0 end:0x804510E0
+	.sbss       start:0x804510D0 end:0x804510D8
 	.sdata2     start:0x80454B40 end:0x80454B58
 
 d_msg_scrn_3select.o:
@@ -1217,6 +1271,7 @@ d_msg_scrn_light.o:
 	.rodata     start:0x80399B08 end:0x80399B78
 	.data       start:0x803C1298 end:0x803C12B0
 	.bss        start:0x804306C8 end:0x80430728
+	.sbss       start:0x804510D8 end:0x804510E0
 	.sdata2     start:0x80454CD8 end:0x80454CE8
 
 d_msg_scrn_place.o:
@@ -1281,12 +1336,14 @@ d_ovlp_fade.o:
 	.sbss       start:0x804510E0 end:0x804510E8
 
 d_ovlp_fade2.o:
-	.text       start:0x8025247C end:0x80252ED4
+	.text       start:0x8025247C end:0x80252E8C
+	.text       start:0x80252E8C end:0x80252ED4
 	.data       start:0x803C2CF0 end:0x803C2D70
 	.sdata2     start:0x80454E20 end:0x80454E58
 
 d_ovlp_fade3.o:
-	.text       start:0x80252ED4 end:0x80253930
+	.text       start:0x80252ED4 end:0x802538E8
+	.text       start:0x802538E8 end:0x80253930
 	.data       start:0x803C2D70 end:0x803C2DF8
 	.sdata2     start:0x80454E58 end:0x80454E88
 
@@ -1328,7 +1385,8 @@ d_s_name.o:
 	.sdata2     start:0x80454EF8 end:0x80454F18
 
 d_s_play.o:
-	.text       start:0x80259400 end:0x8025AE1C
+	.text       start:0x80259400 end:0x8025ABC4
+	.text       start:0x8025ABC4 end:0x8025AE1C
 	.ctors      start:0x803738C4 end:0x803738C8
 	.rodata     start:0x8039A2C8 end:0x8039A388
 	.data       start:0x803C3158 end:0x803C3260
@@ -1370,27 +1428,37 @@ d_k_wpillar.o:
 	.data       start:0x803C3470 end:0x803C34B0
 	.sdata2     start:0x80454FF0 end:0x80455008
 
+__start.o:
+	.init       start:0x80003100 end:0x80003458
+
+__mem.o:
+	.init       start:0x80003458 end:0x800035E4
+
+mem_TRK.o: comment:0
+	.init       start:0x800035E4 end:0x80005544
+
 DynamicLink.o:
-	.text       start:0x802621CC end:0x80263220
+	.text       start:0x802621CC end:0x802631D4
+	.text       start:0x802631D4 end:0x80263220
 	.rodata     start:0x8039A4A0 end:0x8039A7E8
 	.data       start:0x803C34B0 end:0x803C3528
 	.sbss       start:0x80451138 end:0x80451150
 	.sdata2     start:0x80455008 end:0x80455018
 
-SComponent.a/c_API.o:
+libSComponent.a/c_API.o:
 	.data       start:0x803C3528 end:0x803C3540
 
-SComponent.a/c_malloc.o:
+libSComponent.a/c_malloc.o:
 	.text       start:0x80263220 end:0x8026328C
-	.sbss       start:0x80451150 end:0x80451160
+	.sbss       start:0x80451150 end:0x80451158
 
-SComponent.a/c_API_controller_pad.o:
+libSComponent.a/c_API_controller_pad.o:
 	.text       start:0x8026328C end:0x802632C8
 
-SComponent.a/c_API_graphic.o:
+libSComponent.a/c_API_graphic.o:
 	.text       start:0x802632C8 end:0x80263358
 
-SComponent.a/c_cc_d.o:
+libSComponent.a/c_cc_d.o:
 	.text       start:0x80263358 end:0x80264A6C
 	.ctors      start:0x803738CC end:0x803738D0
 	.rodata     start:0x8039A7E8 end:0x8039A868
@@ -1398,150 +1466,151 @@ SComponent.a/c_cc_d.o:
 	.bss        start:0x80430CA8 end:0x80430CC0
 	.sdata2     start:0x80455018 end:0x80455038
 
-SComponent.a/c_cc_s.o:
+libSComponent.a/c_cc_s.o:
 	.text       start:0x80264A6C end:0x80265E1C
 	.data       start:0x803C3748 end:0x803C3778
 	.bss        start:0x80430CC0 end:0x80430CD8
+	.sbss       start:0x80451158 end:0x80451160
 	.sdata2     start:0x80455038 end:0x80455070
 
-SComponent.a/c_counter.o:
+libSComponent.a/c_counter.o:
 	.text       start:0x80265E1C end:0x80265E64
 	.bss        start:0x80430CD8 end:0x80430CE8
 
-SComponent.a/c_list.o:
+libSComponent.a/c_list.o:
 	.text       start:0x80265E64 end:0x80266060
 
-SComponent.a/c_list_iter.o:
+libSComponent.a/c_list_iter.o:
 	.text       start:0x80266060 end:0x802660D0
 
-SComponent.a/c_node.o:
+libSComponent.a/c_node.o:
 	.text       start:0x802660D0 end:0x80266324
 
-SComponent.a/c_node_iter.o:
+libSComponent.a/c_node_iter.o:
 	.text       start:0x80266324 end:0x80266440
 
-SComponent.a/c_tree.o:
+libSComponent.a/c_tree.o:
 	.text       start:0x80266440 end:0x80266540
 
-SComponent.a/c_tree_iter.o:
+libSComponent.a/c_tree_iter.o:
 	.text       start:0x80266540 end:0x80266624
 
-SComponent.a/c_phase.o:
+libSComponent.a/c_phase.o:
 	.text       start:0x80266624 end:0x802667D4
 
-SComponent.a/c_request.o:
+libSComponent.a/c_request.o:
 	.text       start:0x802667D4 end:0x80266880
 
-SComponent.a/c_tag.o:
+libSComponent.a/c_tag.o:
 	.text       start:0x80266880 end:0x80266A7C
 
-SComponent.a/c_tag_iter.o:
+libSComponent.a/c_tag_iter.o:
 	.text       start:0x80266A7C end:0x80266AE4
 
-SComponent.a/c_xyz.o:
+libSComponent.a/c_xyz.o:
 	.text       start:0x80266AE4 end:0x802673F4
 	.ctors      start:0x803738D0 end:0x803738D4
 	.rodata     start:0x8039A868 end:0x8039A878
 	.bss        start:0x80430CE8 end:0x80430DA8
 	.sdata2     start:0x80455070 end:0x804550A0
 
-SComponent.a/c_sxyz.o:
+libSComponent.a/c_sxyz.o:
 	.text       start:0x802673F4 end:0x802675E4
 	.ctors      start:0x803738D4 end:0x803738D8
 	.bss        start:0x80430DA8 end:0x80430DB8
 	.sbss       start:0x80451160 end:0x80451168
 	.sdata2     start:0x804550A0 end:0x804550A8
 
-SComponent.a/c_math.o:
+libSComponent.a/c_math.o:
 	.text       start:0x802675E4 end:0x80267B4C
 	.data       start:0x803C3778 end:0x803C3F80
 	.sbss       start:0x80451168 end:0x80451180
 	.sdata2     start:0x804550A8 end:0x804550E8
 
-SComponent.a/c_bg_s_chk.o:
+libSComponent.a/c_bg_s_chk.o:
 	.text       start:0x80267B4C end:0x80267C1C
 	.data       start:0x803C3F80 end:0x803C3F90
 
-SComponent.a/c_bg_s_gnd_chk.o:
+libSComponent.a/c_bg_s_gnd_chk.o:
 	.text       start:0x80267C1C end:0x80267D5C
 	.data       start:0x803C3F90 end:0x803C3FA8
 
-SComponent.a/c_bg_s_lin_chk.o:
+libSComponent.a/c_bg_s_lin_chk.o:
 	.text       start:0x80267D5C end:0x80267F88
 	.data       start:0x803C3FA8 end:0x803C3FC0
 
-SComponent.a/c_bg_s_shdw_draw.o:
+libSComponent.a/c_bg_s_shdw_draw.o:
 	.text       start:0x80267F88 end:0x80268074
 	.data       start:0x803C3FC0 end:0x803C3FD0
 
-SComponent.a/c_bg_s_poly_info.o:
+libSComponent.a/c_bg_s_poly_info.o:
 	.text       start:0x80268074 end:0x802681C0
 	.data       start:0x803C3FD0 end:0x803C3FE0
 
-SComponent.a/c_bg_w.o:
+libSComponent.a/c_bg_w.o:
 	.text       start:0x802681C0 end:0x80268260
 	.sdata2     start:0x804550E8 end:0x804550F0
 
-SComponent.a/c_m2d.o:
+libSComponent.a/c_m2d.o:
 	.text       start:0x80268260 end:0x80268560
 	.sdata2     start:0x804550F0 end:0x80455118
 
-SComponent.a/c_m3d.o:
+libSComponent.a/c_m3d.o:
 	.text       start:0x80268560 end:0x8026EC54
 	.ctors      start:0x803738D8 end:0x803738DC
 	.sbss       start:0x80451180 end:0x80451188
 	.sdata2     start:0x80455118 end:0x804551D0
 
-SComponent.a/c_m3d_g_aab.o:
+libSComponent.a/c_m3d_g_aab.o:
 	.text       start:0x8026EC54 end:0x8026EEB4
 	.sdata2     start:0x804551D0 end:0x804551E0
 
-SComponent.a/c_m3d_g_cir.o:
+libSComponent.a/c_m3d_g_cir.o:
 	.text       start:0x8026EEB4 end:0x8026EF88
 	.data       start:0x803C3FE0 end:0x803C3FF8
 
-SComponent.a/c_m3d_g_cps.o:
+libSComponent.a/c_m3d_g_cps.o:
 	.text       start:0x8026EF88 end:0x8026F0A8
 	.data       start:0x803C3FF8 end:0x803C4020
 
-SComponent.a/c_m3d_g_cyl.o:
+libSComponent.a/c_m3d_g_cyl.o:
 	.text       start:0x8026F0A8 end:0x8026F2A8
 
-SComponent.a/c_m3d_g_lin.o:
+libSComponent.a/c_m3d_g_lin.o:
 	.text       start:0x8026F2A8 end:0x8026F3DC
 
-SComponent.a/c_m3d_g_pla.o:
+libSComponent.a/c_m3d_g_pla.o:
 	.text       start:0x8026F3DC end:0x8026F648
 
-SComponent.a/c_m3d_g_sph.o:
+libSComponent.a/c_m3d_g_sph.o:
 	.text       start:0x8026F648 end:0x8026F7B0
 
-SComponent.a/c_m3d_g_tri.o:
+libSComponent.a/c_m3d_g_tri.o:
 	.text       start:0x8026F7B0 end:0x8026F93C
 
-SComponent.a/c_lib.o:
+libSComponent.a/c_lib.o:
 	.text       start:0x8026F93C end:0x80270F68
 	.bss        start:0x80430DB8 end:0x80430F98
 	.sdata      start:0x80450768 end:0x80450770
 	.sdata2     start:0x804551E0 end:0x80455208
 
-SComponent.a/c_angle.o:
+libSComponent.a/c_angle.o:
 	.text       start:0x80270F68 end:0x80271C8C
 	.ctors      start:0x803738DC end:0x803738E0
 	.bss        start:0x80430F98 end:0x80430FD8
 	.sbss       start:0x80451188 end:0x804511A0
 	.sdata2     start:0x80455208 end:0x80455240
 
-SStandard.a/s_basic.o:
+libSStandard.a/s_basic.o:
 	.text       start:0x80271C8C end:0x80271CD0
 
-JFramework.a/JFWSystem.o:
+libJFramework.a/JFWSystem.o:
 	.text       start:0x80271CD0 end:0x80272040
 	.sdata      start:0x80450770 end:0x804507A0
 	.sbss       start:0x804511A0 end:0x804511C0
 	.sdata2     start:0x80455240 end:0x80455250
 
-JFramework.a/JFWDisplay.o:
+libJFramework.a/JFWDisplay.o:
 	.text       start:0x80272040 end:0x80273778
 	.ctors      start:0x803738E0 end:0x803738E4
 	.rodata     start:0x8039A878 end:0x8039A948
@@ -1550,272 +1619,283 @@ JFramework.a/JFWDisplay.o:
 	.sbss       start:0x804511C0 end:0x804511E8
 	.sdata2     start:0x80455250 end:0x80455278
 
-J3DU.a/J3DUClipper.o:
+libJ3DU.a/J3DUClipper.o:
 	.text       start:0x80273778 end:0x80273E08
 	.rodata     start:0x8039A948 end:0x8039A9F0
 	.sdata2     start:0x80455278 end:0x80455290
 
-J3DU.a/J3DUDL.o:
+libJ3DU.a/J3DUDL.o:
 	.text       start:0x80273E08 end:0x80273E10
 
-JParticle.a/JPAResourceManager.o:
+libJParticle.a/JPAResourceManager.o:
 	.text       start:0x80273E10 end:0x80274010
 
-JParticle.a/JPAResource.o:
+libJParticle.a/JPAResource.o:
 	.text       start:0x80274010 end:0x80276A90
 	.data       start:0x803C40C0 end:0x803C42E0
 	.sdata2     start:0x80455290 end:0x804552A8
 
-JParticle.a/JPABaseShape.o:
+libJParticle.a/JPABaseShape.o:
 	.text       start:0x80276A90 end:0x8027A918
 	.data       start:0x803C42E0 end:0x803C4488
-	.sdata      start:0x804507A0 end:0x804507AC
+	.sdata      start:0x804507A0 end:0x804507A8
 	.sdata2     start:0x804552A8 end:0x804552E0
 
-JParticle.a/JPAExtraShape.o:
+libJParticle.a/JPAExtraShape.o:
 	.text       start:0x8027A918 end:0x8027AEBC
 	.sdata2     start:0x804552E0 end:0x80455308
 
-JParticle.a/JPAChildShape.o:
+libJParticle.a/JPAChildShape.o:
 	.text       start:0x8027AEBC end:0x8027B040
 	.sdata2     start:0x80455308 end:0x80455310
 
-JParticle.a/JPAExTexShape.o:
+libJParticle.a/JPAExTexShape.o:
 	.text       start:0x8027B040 end:0x8027B144
 
-JParticle.a/JPADynamicsBlock.o:
+libJParticle.a/JPADynamicsBlock.o:
 	.text       start:0x8027B144 end:0x8027BDEC
 	.data       start:0x803C4488 end:0x803C44A8
 	.sdata2     start:0x80455310 end:0x80455338
 
-JParticle.a/JPAFieldBlock.o:
+libJParticle.a/JPAFieldBlock.o:
 	.text       start:0x8027BDEC end:0x8027D730
 	.data       start:0x803C44A8 end:0x803C4598
 	.sdata2     start:0x80455338 end:0x80455350
 
-JParticle.a/JPAKeyBlock.o:
+libJParticle.a/JPAKeyBlock.o:
 	.text       start:0x8027D730 end:0x8027D7D4
 	.sdata2     start:0x80455350 end:0x80455358
 
-JParticle.a/JPATexture.o:
+libJParticle.a/JPATexture.o:
 	.text       start:0x8027D7D4 end:0x8027D8A0
 	.data       start:0x803C4598 end:0x803C45A8
 
-JParticle.a/JPAResourceLoader.o:
+libJParticle.a/JPAResourceLoader.o:
 	.text       start:0x8027D8A0 end:0x8027DCA0
 
-JParticle.a/JPAEmitterManager.o:
+libJParticle.a/JPAEmitterManager.o:
 	.text       start:0x8027DCA0 end:0x8027E6A4
 	.sdata2     start:0x80455358 end:0x80455370
 
-JParticle.a/JPAEmitter.o:
+libJParticle.a/JPAEmitter.o:
 	.text       start:0x8027E6A4 end:0x8027EFA4
 	.sdata2     start:0x80455370 end:0x80455388
 
-JParticle.a/JPAParticle.o:
+libJParticle.a/JPAParticle.o:
 	.text       start:0x8027EFA4 end:0x80280588
 	.sdata2     start:0x80455388 end:0x804553B8
 
-JParticle.a/JPAMath.o:
+libJParticle.a/JPAMath.o:
 	.text       start:0x80280588 end:0x80280A48
 	.sdata2     start:0x804553B8 end:0x804553C8
 
-JStage.a/JSGActor.o:
+libJStage.a/JSGActor.o:
 	.text       start:0x80280A48 end:0x80280B20
 	.data       start:0x803C45A8 end:0x803C4638
 	.sdata2     start:0x804553C8 end:0x804553D0
 
-JStage.a/JSGAmbientLight.o:
+libJStage.a/JSGAmbientLight.o:
 	.text       start:0x80280B20 end:0x80280BA0
 	.data       start:0x803C4638 end:0x803C4680
 	.sdata2     start:0x804553D0 end:0x804553D8
 
-JStage.a/JSGCamera.o:
+libJStage.a/JSGCamera.o:
 	.text       start:0x80280BA0 end:0x80280C80
 	.data       start:0x803C4680 end:0x803C4718
 	.sdata2     start:0x804553D8 end:0x804553E0
 
-JStage.a/JSGFog.o:
+libJStage.a/JSGFog.o:
 	.text       start:0x80280C80 end:0x80280D28
 	.data       start:0x803C4718 end:0x803C4778
 	.sdata2     start:0x804553E0 end:0x804553E8
 
-JStage.a/JSGLight.o:
+libJStage.a/JSGLight.o:
 	.text       start:0x80280D28 end:0x80280DD4
 	.data       start:0x803C4778 end:0x803C47E8
 	.sdata2     start:0x804553E8 end:0x804553F0
 
-JStage.a/JSGObject.o:
+libJStage.a/JSGObject.o:
 	.text       start:0x80280DD4 end:0x80280E90
 	.data       start:0x803C47E8 end:0x803C4828
 	.sdata2     start:0x804553F0 end:0x804553F8
 
-JStudio.a/ctb-data.o:
+libJStudio.a/ctb-data.o:
 	.sdata2     start:0x804553F8 end:0x80455400
 
-JStage.a/JSGSystem.o:
+libJStage.a/JSGSystem.o:
 	.text       start:0x80280E90 end:0x80280F18
 	.data       start:0x803C4828 end:0x803C4878
 
-JStudio.a/ctb.o:
+libJStudio.a/ctb.o:
 	.text       start:0x80280F18 end:0x80281648
 	.data       start:0x803C4878 end:0x803C48E0
 
-JStudio.a/functionvalue.o:
-	.text       start:0x80281648 end:0x80283F80
+libJStudio.a/functionvalue.o:
+	.text       start:0x80281648 end:0x80283E24
 	.rodata     start:0x8039A9F0 end:0x8039AA00
 	.data       start:0x803C48E0 end:0x803C49C0
 	.sbss       start:0x804511E8 end:0x804511F0
 	.sdata2     start:0x80455400 end:0x80455450
 
-JStudio.a/fvb-data.o:
+libJStudio.a/fvb-data.o:
 	.sdata2     start:0x80455450 end:0x80455458
 
-JStudio.a/fvb.o:
-	.text       start:0x80283F80 end:0x802850AC
+libJStudio.a/functionvalue-inline.o:
+	.text       start:0x80283E24 end:0x80283F80
+
+libJStudio.a/fvb.o:
+	.text       start:0x80283F80 end:0x80285018
 	.rodata     start:0x8039AA00 end:0x8039AA40
 	.data       start:0x803C49C0 end:0x803C4AC0
 
-JStudio.a/fvb-data-parse.o:
+libJStudio.a/fvb-inline.o:
+	.text       start:0x80285018 end:0x802850AC
+
+libJStudio.a/fvb-data-parse.o:
 	.text       start:0x802850AC end:0x80285114
 
-JStudio.a/jstudio-control.o:
+libJStudio.a/jstudio-control.o:
 	.text       start:0x80285114 end:0x802859DC
 	.rodata     start:0x8039AA40 end:0x8039AA68
 	.data       start:0x803C4AC0 end:0x803C4B00
 	.sdata2     start:0x80455458 end:0x80455460
 
-JStudio.a/jstudio-data.o:
+libJStudio.a/jstudio-data.o:
 	.sdata2     start:0x80455460 end:0x80455468
 
-JStudio.a/jstudio-math.o:
+libJStudio.a/jstudio-math.o:
 	.text       start:0x802859DC end:0x80285E0C
 	.sdata2     start:0x80455468 end:0x804554A0
 
-JStudio.a/jstudio-object.o:
+libJStudio.a/jstudio-object.o:
 	.text       start:0x80285E0C end:0x80288988
 	.ctors      start:0x803738E4 end:0x803738E8
 	.rodata     start:0x8039AA68 end:0x8039AB88
 	.data       start:0x803C4B00 end:0x803C56A0
 	.bss        start:0x80431010 end:0x80431188
-	.sbss       start:0x804511F0 end:0x80451208
+	.sbss       start:0x804511F0 end:0x804511F8
 	.sdata2     start:0x804554A0 end:0x804554D0
 
-JStudio.a/object-id.o:
+libJStudio.a/object-id.o:
 	.text       start:0x80288988 end:0x80288A78
 
-JStudio.a/stb.o:
+libJStudio.a/stb.o:
 	.text       start:0x80288A78 end:0x802899BC
 	.data       start:0x803C56A0 end:0x803C5720
 	.sdata2     start:0x804554D0 end:0x804554D8
 
-JStudio.a/stb-data.o:
+libJStudio.a/stb-data.o:
 	.rodata     start:0x8039AB88 end:0x8039ABA8
 	.sdata2     start:0x804554D8 end:0x804554E0
 
-JStudio.a/stb-data-parse.o:
+libJStudio.a/stb-data-parse.o:
 	.text       start:0x802899BC end:0x80289B00
 
-JStudio_JStage.a/control.o:
+libJStudio_JStage.a/control.o:
 	.text       start:0x80289B00 end:0x8028A1F8
 	.data       start:0x803C5720 end:0x803C5730
 
-JStudio_JStage.a/object.o:
+libJStudio_JStage.a/object.o:
 	.text       start:0x8028A1F8 end:0x8028A5F0
 
-JStudio_JStage.a/object-actor.o:
+libJStudio_JStage.a/object-actor.o:
 	.text       start:0x8028A5F0 end:0x8028B610
 	.ctors      start:0x803738E8 end:0x803738EC
 	.data       start:0x803C5730 end:0x803C5888
 	.bss        start:0x80431188 end:0x80431298
 	.sdata2     start:0x804554E0 end:0x804554E8
 
-JStudio_JStage.a/object-ambientlight.o:
+libJStudio_JStage.a/object-ambientlight.o:
 	.text       start:0x8028B610 end:0x8028B8A0
 	.data       start:0x803C5888 end:0x803C58A8
 
-JStudio_JStage.a/object-camera.o:
-	.text       start:0x8028B8A0 end:0x8028C574
+libJStudio_JStage.a/object-camera.o:
+	.text       start:0x8028B8A0 end:0x8028C4E4
+	.text       start:0x8028C4E4 end:0x8028C574
 	.ctors      start:0x803738EC end:0x803738F0
 	.data       start:0x803C58A8 end:0x803C59A0
 	.bss        start:0x80431298 end:0x80431378
 
-JStudio_JStage.a/object-fog.o:
-	.text       start:0x8028C574 end:0x8028CB50
+libJStudio_JStage.a/object-fog.o:
+	.text       start:0x8028C574 end:0x8028CAC0
+	.text       start:0x8028CAC0 end:0x8028CB50
 	.ctors      start:0x803738F0 end:0x803738F4
 	.data       start:0x803C59A0 end:0x803C5A30
 	.bss        start:0x80431378 end:0x80431400
 
-JStudio_JStage.a/object-light.o:
-	.text       start:0x8028CB50 end:0x8028D550
+libJStudio_JStage.a/object-light.o:
+	.text       start:0x8028CB50 end:0x8028D258
+	.text       start:0x8028D258 end:0x8028D550
 	.ctors      start:0x803738F4 end:0x803738F8
 	.data       start:0x803C5A30 end:0x803C5A68
 	.bss        start:0x80431400 end:0x80431490
 	.sdata2     start:0x804554E8 end:0x80455510
 
-JStudio_JAudio2.a/control.o:
+libJStudio_JAudio2.a/control.o:
 	.text       start:0x8028D550 end:0x8028D728
 	.data       start:0x803C5A68 end:0x803C5A78
 
-JStudio_JAudio2.a/object-sound.o:
+libJStudio_JAudio2.a/object-sound.o:
 	.text       start:0x8028D728 end:0x8028E3A0
 	.ctors      start:0x803738F8 end:0x803738FC
 	.data       start:0x803C5A78 end:0x803C5AD8
 	.bss        start:0x80431490 end:0x80431540
+	.sbss       start:0x804511F8 end:0x80451200
 	.sdata2     start:0x80455510 end:0x80455520
 
-JStudio_JParticle.a/control.o:
+libJStudio_JParticle.a/control.o:
 	.text       start:0x8028E3A0 end:0x8028E60C
 	.rodata     start:0x8039ABA8 end:0x8039ABB8
 	.data       start:0x803C5AD8 end:0x803C5AF0
 
-JStudio_JParticle.a/object-particle.o:
+libJStudio_JParticle.a/object-particle.o:
 	.text       start:0x8028E60C end:0x8028F2E8
 	.data       start:0x803C5AF0 end:0x803C5B58
 	.bss        start:0x80431540 end:0x804315D0
+	.sbss       start:0x80451200 end:0x80451208
 	.sdata2     start:0x80455520 end:0x80455558
 
-JAudio2.a/JASCalc.o:
+libJAudio2.a/JASCalc.o:
 	.text       start:0x8028F2E8 end:0x8028F6C4
 	.rodata     start:0x8039ABB8 end:0x8039AFD0
 	.sdata2     start:0x80455558 end:0x80455588
 
-JAudio2.a/JASTaskThread.o:
+libJAudio2.a/JASTaskThread.o:
 	.text       start:0x8028F6C4 end:0x8028FEFC
 	.data       start:0x803C5B58 end:0x803C5B68
 
-JAudio2.a/JASDvdThread.o:
+libJAudio2.a/JASDvdThread.o:
 	.text       start:0x8028FEFC end:0x8028FFA8
 	.sbss       start:0x80451208 end:0x80451210
 
-JAudio2.a/JASCallback.o:
+libJAudio2.a/JASCallback.o:
 	.text       start:0x8028FFA8 end:0x80290140
 
-JAudio2.a/JASHeapCtrl.o:
+libJAudio2.a/JASHeapCtrl.o:
 	.text       start:0x80290140 end:0x80290BD0
 	.ctors      start:0x803738FC end:0x80373900
 	.bss        start:0x804315D0 end:0x80431620
 	.sbss       start:0x80451210 end:0x80451220
 
-JAudio2.a/JASResArcLoader.o:
+libJAudio2.a/JASResArcLoader.o:
 	.text       start:0x80290BD0 end:0x80290D74
 
-JAudio2.a/JASProbe.o:
+libJAudio2.a/JASProbe.o:
 	.text       start:0x80290D74 end:0x80290F64
 	.bss        start:0x80431620 end:0x80431660
 	.sdata2     start:0x80455588 end:0x804555A0
 
-JAudio2.a/JASReport.o:
+libJAudio2.a/JASReport.o:
 	.text       start:0x80290F64 end:0x80291060
 	.bss        start:0x80431660 end:0x80431678
 	.sbss       start:0x80451220 end:0x80451238
 
-JAudio2.a/JASCmdStack.o:
+libJAudio2.a/JASCmdStack.o:
 	.text       start:0x80291060 end:0x80291228
 	.ctors      start:0x80373900 end:0x80373904
 	.bss        start:0x80431678 end:0x804316A8
 
-JAudio2.a/JASTrack.o:
+libJAudio2.a/JASTrack.o:
 	.text       start:0x80291228 end:0x8029354C
 	.ctors      start:0x80373904 end:0x80373908
 	.rodata     start:0x8039AFD0 end:0x8039B018
@@ -1823,20 +1903,20 @@ JAudio2.a/JASTrack.o:
 	.bss        start:0x804316A8 end:0x80431B18
 	.sdata2     start:0x804555A0 end:0x804555D8
 
-JAudio2.a/JASTrackPort.o:
+libJAudio2.a/JASTrackPort.o:
 	.text       start:0x8029354C end:0x80293644
 
-JAudio2.a/JASRegisterParam.o:
+libJAudio2.a/JASRegisterParam.o:
 	.text       start:0x80293644 end:0x802938BC
 	.data       start:0x803C5B90 end:0x803C5BE0
 
-JAudio2.a/JASSeqCtrl.o:
+libJAudio2.a/JASSeqCtrl.o:
 	.text       start:0x802938BC end:0x80293CF4
 	.ctors      start:0x80373908 end:0x8037390C
 	.bss        start:0x80431B18 end:0x80431B28
 	.sbss       start:0x80451238 end:0x80451240
 
-JAudio2.a/JASSeqParser.o:
+libJAudio2.a/JASSeqParser.o:
 	.text       start:0x80293CF4 end:0x80296108
 	.ctors      start:0x8037390C end:0x80373910
 	.rodata     start:0x8039B018 end:0x8039B168
@@ -1844,10 +1924,10 @@ JAudio2.a/JASSeqParser.o:
 	.sbss       start:0x80451240 end:0x80451250
 	.sdata2     start:0x804555D8 end:0x80455610
 
-JAudio2.a/JASSeqReader.o:
+libJAudio2.a/JASSeqReader.o:
 	.text       start:0x80296108 end:0x8029631C
 
-JAudio2.a/JASAramStream.o:
+libJAudio2.a/JASAramStream.o:
 	.text       start:0x8029631C end:0x80297930
 	.rodata     start:0x8039B168 end:0x8039B190
 	.data       start:0x803C7670 end:0x803C76A8
@@ -1855,343 +1935,347 @@ JAudio2.a/JASAramStream.o:
 	.sbss       start:0x80451250 end:0x80451268
 	.sdata2     start:0x80455610 end:0x80455630
 
-JAudio2.a/JASBank.o:
+libJAudio2.a/JASBank.o:
 	.text       start:0x80297930 end:0x80297D78
 	.rodata     start:0x8039B190 end:0x8039B1B8
 	.bss        start:0x80431B48 end:0x80431B58
 	.sdata2     start:0x80455630 end:0x80455640
 
-JAudio2.a/JASBasicBank.o:
+libJAudio2.a/JASBasicBank.o:
 	.text       start:0x80297D78 end:0x80297F74
 	.data       start:0x803C76A8 end:0x803C76D0
 
-JAudio2.a/JASVoiceBank.o:
+libJAudio2.a/JASVoiceBank.o:
 	.text       start:0x80297F74 end:0x80298014
 	.rodata     start:0x8039B1B8 end:0x8039B1D0
 	.data       start:0x803C76D0 end:0x803C76E8
 	.sbss       start:0x80451268 end:0x80451270
 
-JAudio2.a/JASBasicInst.o:
-	.text       start:0x80298014 end:0x802982EC
+libJAudio2.a/JASBasicInst.o:
+	.text       start:0x80298014 end:0x8029828C
+	.text       start:0x8029828C end:0x802982EC
 	.data       start:0x803C76E8 end:0x803C7710
 	.sdata2     start:0x80455640 end:0x80455648
 
-JAudio2.a/JASDrumSet.o:
+libJAudio2.a/JASDrumSet.o:
 	.text       start:0x802982EC end:0x802984F8
 	.data       start:0x803C7710 end:0x803C7728
 	.bss        start:0x80431B58 end:0x80431B70
 	.sbss       start:0x80451270 end:0x80451278
 	.sdata2     start:0x80455648 end:0x80455658
 
-JAudio2.a/JASBasicWaveBank.o:
+libJAudio2.a/JASBasicWaveBank.o:
 	.text       start:0x802984F8 end:0x80298C94
 	.data       start:0x803C7728 end:0x803C7798
 	.sbss       start:0x80451278 end:0x80451280
 
-JAudio2.a/JASSimpleWaveBank.o:
+libJAudio2.a/JASSimpleWaveBank.o:
 	.text       start:0x80298C94 end:0x80298FB0
 	.data       start:0x803C7798 end:0x803C77E0
 
-JAudio2.a/JASWSParser.o:
+libJAudio2.a/JASWSParser.o:
 	.text       start:0x80298FB0 end:0x80299538
 	.sbss       start:0x80451280 end:0x80451288
 
-JAudio2.a/JASBNKParser.o:
+libJAudio2.a/JASBNKParser.o:
 	.text       start:0x80299538 end:0x8029A0A0
 	.ctors      start:0x80373910 end:0x80373914
 	.bss        start:0x80431B70 end:0x80431B90
 	.sbss       start:0x80451288 end:0x80451290
 	.sdata2     start:0x80455658 end:0x80455680
 
-JAudio2.a/JASWaveArcLoader.o:
+libJAudio2.a/JASWaveArcLoader.o:
 	.text       start:0x8029A0A0 end:0x8029A800
 	.data       start:0x803C77E0 end:0x803C7848
 	.sbss       start:0x80451290 end:0x80451298
 
-JAudio2.a/JASChannel.o:
+libJAudio2.a/JASChannel.o:
 	.text       start:0x8029A800 end:0x8029BD14
 	.data       start:0x803C7848 end:0x803C78A8
 	.bss        start:0x80431B90 end:0x80431C40
 	.sbss       start:0x80451298 end:0x804512A0
 	.sdata2     start:0x80455680 end:0x804556E0
 
-JAudio2.a/JASLfo.o:
+libJAudio2.a/JASLfo.o:
 	.text       start:0x8029BD14 end:0x8029BE94
 	.ctors      start:0x80373914 end:0x80373918
 	.bss        start:0x80431C40 end:0x80431C58
 	.sdata2     start:0x804556E0 end:0x804556F8
 
-JAudio2.a/JASOscillator.o:
+libJAudio2.a/JASOscillator.o:
 	.text       start:0x8029BE94 end:0x8029C388
 	.rodata     start:0x8039B1D0 end:0x8039B2E0
 	.data       start:0x803C78A8 end:0x803C78B8
 	.sdata2     start:0x804556F8 end:0x80455720
 
-JAudio2.a/JASAiCtrl.o:
+libJAudio2.a/JASAiCtrl.o:
 	.text       start:0x8029C388 end:0x8029CCDC
 	.rodata     start:0x8039B2E0 end:0x8039B338
 	.data       start:0x803C78B8 end:0x803C78E0
 	.bss        start:0x80431C58 end:0x80431C68
-	.sdata      start:0x804507AC end:0x804507B8
+	.sdata      start:0x804507A8 end:0x804507B8
 	.sbss       start:0x804512A0 end:0x804512D8
 	.sdata2     start:0x80455720 end:0x80455740
 
-JAudio2.a/JASAudioThread.o:
+libJAudio2.a/JASAudioThread.o:
 	.text       start:0x8029CCDC end:0x8029D0B4
 	.rodata     start:0x8039B338 end:0x8039B360
 	.data       start:0x803C78E0 end:0x803C78F0
 	.bss        start:0x80431C68 end:0x80431C78
 	.sbss       start:0x804512D8 end:0x804512E0
 
-JAudio2.a/JASAudioReseter.o:
+libJAudio2.a/JASAudioReseter.o:
 	.text       start:0x8029D0B4 end:0x8029D2F4
 	.sdata2     start:0x80455740 end:0x80455748
 
-JAudio2.a/JASDSPChannel.o:
+libJAudio2.a/JASDSPChannel.o:
 	.text       start:0x8029D2F4 end:0x8029D958
 	.sbss       start:0x804512E0 end:0x804512E8
 
-JAudio2.a/JASDSPInterface.o:
+libJAudio2.a/JASDSPInterface.o:
 	.text       start:0x8029D958 end:0x8029E130
-	.rodata     start:0x8039B360 end:0x8039B8B8
+	.rodata     start:0x8039B360 end:0x8039B8B8 align:32
 	.data       start:0x803C78F0 end:0x803C7920
 	.sdata      start:0x804507B8 end:0x804507C0
 	.sbss       start:0x804512E8 end:0x804512F8
 	.sdata2     start:0x80455748 end:0x80455760
 
-JAudio2.a/JASDriverIF.o:
+libJAudio2.a/JASDriverIF.o:
 	.text       start:0x8029E130 end:0x8029E3B0
 	.ctors      start:0x80373918 end:0x8037391C
 	.bss        start:0x80431C78 end:0x80431F80
 	.sdata      start:0x804507C0 end:0x804507C8
 
-JAudio2.a/JASSoundParams.o:
+libJAudio2.a/JASSoundParams.o:
 	.text       start:0x8029E3B0 end:0x8029E4E0
 	.sdata2     start:0x80455760 end:0x80455770
 
-JAudio2.a/dspproc.o:
+libJAudio2.a/dspproc.o:
 	.text       start:0x8029E4E0 end:0x8029E6E0
 	.sdata      start:0x804507C8 end:0x804507D0
 	.sbss       start:0x804512F8 end:0x80451300
 	.sdata2     start:0x80455770 end:0x80455778
 
-JAudio2.a/dsptask.o:
+libJAudio2.a/dsptask.o:
 	.text       start:0x8029E6E0 end:0x8029EA00
 	.data       start:0x803C7920 end:0x803C9820
 	.bss        start:0x80431F80 end:0x80434060
-	.sbss       start:0x80451300 end:0x8045130C
+	.sbss       start:0x80451300 end:0x80451308
 
-JAudio2.a/osdsp.o:
+libJAudio2.a/osdsp.o:
 	.text       start:0x8029EA00 end:0x8029EB20
 	.rodata     start:0x8039B8B8 end:0x8039B8F8
 
-JAudio2.a/osdsp_task.o:
+libJAudio2.a/osdsp_task.o:
 	.text       start:0x8029EB20 end:0x8029EFAC
 	.bss        start:0x80434060 end:0x80434078
-	.sbss       start:0x8045130C end:0x80451334
+	.sbss       start:0x80451308 end:0x80451330
 
-JAudio2.a/JAIAudible.o:
+libJAudio2.a/JAIAudible.o:
 	.text       start:0x8029EFAC end:0x8029EFF4
 	.data       start:0x803C9820 end:0x803C9838
 
-JAudio2.a/JAIAudience.o:
+libJAudio2.a/JAIAudience.o:
 	.text       start:0x8029EFF4 end:0x8029F03C
 	.data       start:0x803C9838 end:0x803C9858
 
-JAudio2.a/JAISe.o:
+libJAudio2.a/JAISe.o:
 	.text       start:0x8029F03C end:0x8029F8B0
 	.data       start:0x803C9858 end:0x803C98B0
 	.sdata2     start:0x80455778 end:0x80455788
 
-JAudio2.a/JAISeMgr.o:
+libJAudio2.a/JAISeMgr.o:
 	.text       start:0x8029F8B0 end:0x802A0A6C
 	.rodata     start:0x8039B8F8 end:0x8039B910
 	.data       start:0x803C98B0 end:0x803C98D8
 	.bss        start:0x80434078 end:0x80434098
 	.sdata2     start:0x80455788 end:0x80455798
 
-JAudio2.a/JAISeq.o:
+libJAudio2.a/JAISeq.o:
 	.text       start:0x802A0A6C end:0x802A1774
 	.data       start:0x803C98D8 end:0x803C9928
 	.bss        start:0x80434098 end:0x804340C0
 	.sdata2     start:0x80455798 end:0x804557A8
 
-JAudio2.a/JAISeqDataMgr.o:
+libJAudio2.a/JAISeqDataMgr.o:
 	.text       start:0x802A1774 end:0x802A1804
 	.data       start:0x803C9928 end:0x803C9958
 
-JAudio2.a/JAISeqMgr.o:
+libJAudio2.a/JAISeqMgr.o:
 	.text       start:0x802A1804 end:0x802A2184
 	.data       start:0x803C9958 end:0x803C9970
 	.bss        start:0x804340C0 end:0x804340E0
 	.sdata2     start:0x804557A8 end:0x804557B8
 
-JAudio2.a/JAISound.o:
+libJAudio2.a/JAISound.o:
 	.text       start:0x802A2184 end:0x802A2AB0
 	.rodata     start:0x8039B910 end:0x8039B950
 	.data       start:0x803C9970 end:0x803C99A0
 	.sdata2     start:0x804557B8 end:0x804557D8
 
-JAudio2.a/JAISoundChild.o:
+libJAudio2.a/JAISoundChild.o:
 	.text       start:0x802A2AB0 end:0x802A2C98
 	.sdata2     start:0x804557D8 end:0x804557E8
 
-JAudio2.a/JAISoundHandles.o:
+libJAudio2.a/JAISoundHandles.o:
 	.text       start:0x802A2C98 end:0x802A2D34
 
-JAudio2.a/JAISoundInfo.o:
+libJAudio2.a/JAISoundInfo.o:
 	.text       start:0x802A2D34 end:0x802A2DB4
 	.data       start:0x803C99A0 end:0x803C99C8
 
-JAudio2.a/JAISoundParams.o:
+libJAudio2.a/JAISoundParams.o:
 	.text       start:0x802A2DB4 end:0x802A2F6C
 	.sdata2     start:0x804557E8 end:0x804557F0
 
-JAudio2.a/JAISoundStarter.o:
+libJAudio2.a/JAISoundStarter.o:
 	.text       start:0x802A2F6C end:0x802A30D4
 	.data       start:0x803C99C8 end:0x803C99D8
 
-JAudio2.a/JAIStream.o:
+libJAudio2.a/JAIStream.o:
 	.text       start:0x802A30D4 end:0x802A3AD8
 	.data       start:0x803C99D8 end:0x803C9A08
 	.bss        start:0x804340E0 end:0x804340F0
 	.sdata2     start:0x804557F0 end:0x80455800
 
-JAudio2.a/JAIStreamDataMgr.o:
+libJAudio2.a/JAIStreamDataMgr.o:
 	.text       start:0x802A3AD8 end:0x802A3B68
 	.data       start:0x803C9A08 end:0x803C9A30
 
-JAudio2.a/JAIStreamMgr.o:
+libJAudio2.a/JAIStreamMgr.o:
 	.text       start:0x802A3B68 end:0x802A4244
 	.bss        start:0x804340F0 end:0x80434110
 	.sdata2     start:0x80455800 end:0x80455810
 
-JAudio2.a/JAUAudioArcInterpreter.o:
+libJAudio2.a/JAUAudioArcInterpreter.o:
 	.text       start:0x802A4244 end:0x802A4740
 	.data       start:0x803C9A30 end:0x803C9A78
 
-JAudio2.a/JAUAudioArcLoader.o:
-	.text       start:0x802A4740 end:0x802A4A5C
+libJAudio2.a/JAUAudioArcLoader.o:
+	.text       start:0x802A4740 end:0x802A49FC
+	.text       start:0x802A49FC end:0x802A4A5C
 	.data       start:0x803C9A78 end:0x803C9AC0
 
-JAudio2.a/JAUAudioMgr.o:
+libJAudio2.a/JAUAudioMgr.o:
 	.text       start:0x802A4A5C end:0x802A4A80
 
-JAudio2.a/JAUBankTable.o:
+libJAudio2.a/JAUBankTable.o:
 	.text       start:0x802A4A80 end:0x802A4AC4
 
-JAudio2.a/JAUClusterSound.o:
+libJAudio2.a/JAUClusterSound.o:
 	.text       start:0x802A4AC4 end:0x802A4AD0
 
-JAudio2.a/JAUInitializer.o:
+libJAudio2.a/JAUInitializer.o:
 	.text       start:0x802A4AD0 end:0x802A4EE8
 	.bss        start:0x80434110 end:0x804341B8
 	.sdata2     start:0x80455810 end:0x80455818
 
-JMessage.a/data.o:
+libJMessage.a/data.o:
 	.sdata2     start:0x80455818 end:0x80455820
 
-JAudio2.a/JAUSectionHeap.o:
+libJAudio2.a/JAUSectionHeap.o:
 	.text       start:0x802A4EE8 end:0x802A66A0
 	.rodata     start:0x8039B950 end:0x8039B9C0
 	.data       start:0x803C9AC0 end:0x803C9B38
 	.sdata      start:0x804507D0 end:0x804507D8
 
-JAudio2.a/JAUSeqCollection.o:
+libJAudio2.a/JAUSeqCollection.o:
 	.text       start:0x802A66A0 end:0x802A68F4
 	.data       start:0x803C9B38 end:0x803C9B50
 
-JAudio2.a/JAUSeqDataBlockMgr.o:
+libJAudio2.a/JAUSeqDataBlockMgr.o:
 	.text       start:0x802A68F4 end:0x802A6F70
 
-JAudio2.a/JAUSoundAnimator.o:
+libJAudio2.a/JAUSoundAnimator.o:
 	.text       start:0x802A6F70 end:0x802A7114
 
-JAudio2.a/JAUSoundTable.o:
+libJAudio2.a/JAUSoundTable.o:
 	.text       start:0x802A7114 end:0x802A7420
 
-JAudio2.a/JAUStreamFileTable.o:
+libJAudio2.a/JAUStreamFileTable.o:
 	.text       start:0x802A7420 end:0x802A7548
 	.data       start:0x803C9B50 end:0x803C9B60
 
-JMessage.a/control.o:
+libJMessage.a/control.o:
 	.text       start:0x802A7548 end:0x802A7AF8
 	.data       start:0x803C9B60 end:0x803C9B70
 
-JMessage.a/processor.o:
+libJMessage.a/processor.o:
 	.text       start:0x802A7AF8 end:0x802A8CDC
 	.data       start:0x803C9B70 end:0x803C9C80
 
-JMessage.a/resource.o:
+libJMessage.a/resource.o:
 	.text       start:0x802A8CDC end:0x802A9528
 	.data       start:0x803C9C80 end:0x803C9CD0
 
-JMessage.a/locale.o:
+libJMessage.a/locale.o:
 	.text       start:0x802A9528 end:0x802A968C
 
-Z2AudioLib.a/Z2Calc.o:
+libZ2AudioLib.a/Z2Calc.o:
 	.text       start:0x802A968C end:0x802A9A34
-	.sbss       start:0x80451334 end:0x80451338
+	.sbss       start:0x80451330 end:0x80451338
 	.sdata2     start:0x80455820 end:0x80455838
 
-Z2AudioLib.a/Z2Param.o:
+libZ2AudioLib.a/Z2Param.o:
 	.sdata      start:0x804507D8 end:0x80450870
 	.sbss       start:0x80451338 end:0x80451350
 
-Z2AudioLib.a/Z2AudioArcLoader.o:
-	.text       start:0x802A9A34 end:0x802A9BC8
+libZ2AudioLib.a/Z2AudioArcLoader.o:
+	.text       start:0x802A9A34 end:0x802A9B58
+	.text       start:0x802A9B58 end:0x802A9BC8
 	.data       start:0x803C9CD0 end:0x803C9D18
 
-Z2AudioLib.a/Z2SoundMgr.o:
+libZ2AudioLib.a/Z2SoundMgr.o:
 	.text       start:0x802A9BC8 end:0x802AAB94
 	.rodata     start:0x8039B9C0 end:0x8039B9F0
 	.data       start:0x803C9D18 end:0x803C9D80
 	.sdata2     start:0x80455838 end:0x80455858
 
-Z2AudioLib.a/Z2SoundStarter.o:
-	.text       start:0x802AAB94 end:0x802AB07C
+libZ2AudioLib.a/Z2SoundStarter.o:
+	.text       start:0x802AAB94 end:0x802AAFF0
+	.text       start:0x802AAFF0 end:0x802AB07C
 	.data       start:0x803C9D80 end:0x803C9D98
 	.sdata2     start:0x80455858 end:0x80455870
 
-Z2AudioLib.a/Z2SoundHandles.o:
+libZ2AudioLib.a/Z2SoundHandles.o:
 	.text       start:0x802AB07C end:0x802AB64C
 	.bss        start:0x804341B8 end:0x804341D8
 
-Z2AudioLib.a/Z2SeMgr.o:
+libZ2AudioLib.a/Z2SeMgr.o:
 	.text       start:0x802AB64C end:0x802AEEA0
 	.rodata     start:0x8039B9F0 end:0x8039BA08
 	.data       start:0x803C9D98 end:0x803C9DF8
 	.sdata2     start:0x80455870 end:0x80455998
 
-Z2AudioLib.a/Z2SeqMgr.o:
+libZ2AudioLib.a/Z2SeqMgr.o:
 	.text       start:0x802AEEA0 end:0x802B5F1C
 	.rodata     start:0x8039BA08 end:0x8039BC88
 	.data       start:0x803C9DF8 end:0x803CA508
 	.sdata      start:0x80450870 end:0x80450880
 	.sdata2     start:0x80455998 end:0x80455A18
 
-Z2AudioLib.a/Z2StatusMgr.o:
+libZ2AudioLib.a/Z2StatusMgr.o:
 	.text       start:0x802B5F1C end:0x802B6840
 	.rodata     start:0x8039BC88 end:0x8039BFA8
 	.data       start:0x803CA508 end:0x803CA5C0
 	.sdata2     start:0x80455A18 end:0x80455A38
 
-Z2AudioLib.a/Z2SceneMgr.o:
+libZ2AudioLib.a/Z2SceneMgr.o:
 	.text       start:0x802B6840 end:0x802BA7DC
 	.rodata     start:0x8039BFA8 end:0x8039C220
 	.data       start:0x803CA5C0 end:0x803CAB18
 	.sdata2     start:0x80455A38 end:0x80455A68
 
-Z2AudioLib.a/Z2FxLineMgr.o:
+libZ2AudioLib.a/Z2FxLineMgr.o:
 	.text       start:0x802BA7DC end:0x802BB00C
 	.data       start:0x803CAB18 end:0x803CAC48
 
-Z2AudioLib.a/Z2SoundInfo.o:
+libZ2AudioLib.a/Z2SoundInfo.o:
 	.text       start:0x802BB00C end:0x802BBCDC
 	.data       start:0x803CAC48 end:0x803CAC98
 	.sdata2     start:0x80455A68 end:0x80455AA0
 
-Z2AudioLib.a/Z2Audience.o:
+libZ2AudioLib.a/Z2Audience.o:
 	.text       start:0x802BBCDC end:0x802BDEF0
 	.ctors      start:0x8037391C end:0x80373920
 	.rodata     start:0x8039C220 end:0x8039C230
@@ -2200,38 +2284,38 @@ Z2AudioLib.a/Z2Audience.o:
 	.sbss       start:0x80451350 end:0x80451360
 	.sdata2     start:0x80455AA0 end:0x80455B38
 
-Z2AudioLib.a/Z2SoundObject.o:
+libZ2AudioLib.a/Z2SoundObject.o:
 	.text       start:0x802BDEF0 end:0x802BF920
 	.rodata     start:0x8039C230 end:0x8039C240
 	.data       start:0x803CACD0 end:0x803CAD70
 	.sdata2     start:0x80455B38 end:0x80455B80
 
-Z2AudioLib.a/Z2SoundObjMgr.o:
+libZ2AudioLib.a/Z2SoundObjMgr.o:
 	.text       start:0x802BF920 end:0x802C03C8
 	.ctors      start:0x80373920 end:0x80373924
 	.rodata     start:0x8039C240 end:0x8039C250
 	.data       start:0x803CAD70 end:0x803CB230
 	.sdata2     start:0x80455B80 end:0x80455BD8
 
-Z2AudioLib.a/Z2Creature.o:
+libZ2AudioLib.a/Z2Creature.o:
 	.text       start:0x802C03C8 end:0x802C321C
 	.ctors      start:0x80373924 end:0x80373928
 	.data       start:0x803CB230 end:0x803CB8F0
 	.sdata2     start:0x80455BD8 end:0x80455C98
 
-Z2AudioLib.a/Z2LinkMgr.o:
+libZ2AudioLib.a/Z2LinkMgr.o:
 	.text       start:0x802C321C end:0x802C589C
 	.data       start:0x803CB8F0 end:0x803CB9C8
 	.sbss       start:0x80451360 end:0x80451368
 	.sdata2     start:0x80455C98 end:0x80455D40
 
-Z2AudioLib.a/Z2EnvSeMgr.o:
+libZ2AudioLib.a/Z2EnvSeMgr.o:
 	.text       start:0x802C589C end:0x802CAAC0
 	.rodata     start:0x8039C250 end:0x8039C260
 	.data       start:0x803CB9C8 end:0x803CBC50
 	.sdata2     start:0x80455D40 end:0x80455E60
 
-Z2AudioLib.a/Z2WolfHowlMgr.o:
+libZ2AudioLib.a/Z2WolfHowlMgr.o:
 	.text       start:0x802CAAC0 end:0x802CBC60
 	.ctors      start:0x80373928 end:0x8037392C
 	.data       start:0x803CBC50 end:0x803CBD08
@@ -2239,14 +2323,14 @@ Z2AudioLib.a/Z2WolfHowlMgr.o:
 	.sdata      start:0x80450880 end:0x804508A8
 	.sdata2     start:0x80455E60 end:0x80455EE0
 
-Z2AudioLib.a/Z2SpeechMgr2.o:
+libZ2AudioLib.a/Z2SpeechMgr2.o:
 	.text       start:0x802CBC60 end:0x802CD248
 	.rodata     start:0x8039C260 end:0x8039CA58
 	.data       start:0x803CBD08 end:0x803CBF38
 	.sdata2     start:0x80455EE0 end:0x80455F58
 	.sbss2      start:0x80456BA8 end:0x80456BB0
 
-Z2AudioLib.a/Z2AudioMgr.o:
+libZ2AudioLib.a/Z2AudioMgr.o:
 	.text       start:0x802CD248 end:0x802CDDC8
 	.rodata     start:0x8039CA58 end:0x8039CAD8
 	.data       start:0x803CBF38 end:0x803CBF70
@@ -2254,49 +2338,50 @@ Z2AudioLib.a/Z2AudioMgr.o:
 	.sbss       start:0x80451368 end:0x80451370
 	.sdata2     start:0x80455F58 end:0x80455F68
 
-gf.a/GFGeometry.o:
+libgf.a/GFGeometry.o:
 	.text       start:0x802CDDC8 end:0x802CDE54
 	.sdata      start:0x804508A8 end:0x804508B8
 
-gf.a/GFLight.o:
+libgf.a/GFLight.o:
 	.text       start:0x802CDE54 end:0x802CDE9C
 
-gf.a/GFPixel.o:
+libgf.a/GFPixel.o:
 	.text       start:0x802CDE9C end:0x802CE0D0
 	.sdata2     start:0x80455F68 end:0x80455F98
 
-gf.a/GFTev.o:
+libgf.a/GFTev.o:
 	.text       start:0x802CE0D0 end:0x802CE138
 
-JKernel.a/JKRHeap.o:
+libJKernel.a/JKRHeap.o:
 	.text       start:0x802CE138 end:0x802CEDB4
 	.rodata     start:0x8039CAD8 end:0x8039CAF0
 	.data       start:0x803CBF70 end:0x803CBFD0
 	.sbss       start:0x80451370 end:0x80451398
 
-JKernel.a/JKRExpHeap.o:
+libJKernel.a/JKRExpHeap.o:
 	.text       start:0x802CEDB4 end:0x802D0A24
 	.rodata     start:0x8039CAF0 end:0x8039CE50
 	.data       start:0x803CBFD0 end:0x803CC030
 	.sbss       start:0x80451398 end:0x804513B0
 	.sdata2     start:0x80455F98 end:0x80455FA8
 
-JKernel.a/JKRSolidHeap.o:
+libJKernel.a/JKRSolidHeap.o:
 	.text       start:0x802D0A24 end:0x802D12C4
 	.rodata     start:0x8039CE50 end:0x8039CFA8
 	.data       start:0x803CC030 end:0x803CC090
 	.sdata2     start:0x80455FA8 end:0x80455FC0
 
-JKernel.a/JKRAssertHeap.o:
+libJKernel.a/JKRAssertHeap.o:
 	.text       start:0x802D12C4 end:0x802D147C
 	.data       start:0x803CC090 end:0x803CC0F0
 
-JKernel.a/JKRDisposer.o:
+libJKernel.a/JKRDisposer.o:
 	.text       start:0x802D147C end:0x802D1568
 	.data       start:0x803CC0F0 end:0x803CC100
 
-JKernel.a/JKRThread.o:
-	.text       start:0x802D1568 end:0x802D1FA4
+libJKernel.a/JKRThread.o:
+	.text       start:0x802D1568 end:0x802D1EFC
+	.text       start:0x802D1EFC end:0x802D1FA4
 	.ctors      start:0x8037392C end:0x80373930
 	.rodata     start:0x8039CFA8 end:0x8039D078
 	.data       start:0x803CC100 end:0x803CC128
@@ -2304,8 +2389,9 @@ JKernel.a/JKRThread.o:
 	.sbss       start:0x804513B0 end:0x804513C8
 	.sdata2     start:0x80455FC0 end:0x80455FD0
 
-JKernel.a/JKRAram.o:
-	.text       start:0x802D1FA4 end:0x802D2E44
+libJKernel.a/JKRAram.o:
+	.text       start:0x802D1FA4 end:0x802D2DF0
+	.text       start:0x802D2DF0 end:0x802D2E44
 	.ctors      start:0x80373930 end:0x80373934
 	.rodata     start:0x8039D078 end:0x8039D0B8
 	.data       start:0x803CC128 end:0x803CC168
@@ -2313,177 +2399,184 @@ JKernel.a/JKRAram.o:
 	.sdata      start:0x804508B8 end:0x804508C0
 	.sbss       start:0x804513C8 end:0x80451408
 
-JKernel.a/JKRAramHeap.o:
-	.text       start:0x802D2E44 end:0x802D3304
+libJKernel.a/JKRAramHeap.o:
+	.text       start:0x802D2E44 end:0x802D32B0
+	.text       start:0x802D32B0 end:0x802D3304
 	.ctors      start:0x80373934 end:0x80373938
 	.data       start:0x803CC168 end:0x803CC178
 	.bss        start:0x80434300 end:0x80434318
 
-JKernel.a/JKRAramBlock.o:
+libJKernel.a/JKRAramBlock.o:
 	.text       start:0x802D3304 end:0x802D3574
 	.data       start:0x803CC178 end:0x803CC188
 
-JKernel.a/JKRAramPiece.o:
+libJKernel.a/JKRAramPiece.o:
 	.text       start:0x802D3574 end:0x802D3B48
 	.ctors      start:0x80373938 end:0x8037393C
 	.rodata     start:0x8039D0B8 end:0x8039D120
 	.bss        start:0x80434318 end:0x80434348
 
-JKernel.a/JKRAramStream.o:
+libJKernel.a/JKRAramStream.o:
 	.text       start:0x802D3B48 end:0x802D40F0
 	.rodata     start:0x8039D120 end:0x8039D150
 	.data       start:0x803CC188 end:0x803CC1C8
 	.sbss       start:0x80451408 end:0x80451418
 
-JKernel.a/JKRFileLoader.o:
-	.text       start:0x802D40F0 end:0x802D4638
+libJKernel.a/JKRFileLoader.o:
+	.text       start:0x802D40F0 end:0x802D45E4
+	.text       start:0x802D45E4 end:0x802D4638
 	.ctors      start:0x8037393C end:0x80373940
 	.rodata     start:0x8039D150 end:0x8039D158
 	.data       start:0x803CC1C8 end:0x803CC208
 	.bss        start:0x80434348 end:0x80434360
-	.sdata      start:0x804508C0 end:0x804508CC
+	.sdata      start:0x804508C0 end:0x804508C8
 	.sbss       start:0x80451418 end:0x80451420
 
-JKernel.a/JKRFileFinder.o:
-	.text       start:0x802D4638 end:0x802D49B4
+libJKernel.a/JKRFileFinder.o:
+	.text       start:0x802D4638 end:0x802D4910
+	.text       start:0x802D4910 end:0x802D49B4
 	.data       start:0x803CC208 end:0x803CC238
 
-JKernel.a/JKRFileCache.o:
+libJKernel.a/JKRFileCache.o:
 	.text       start:0x802D49B4 end:0x802D5778
 	.rodata     start:0x8039D158 end:0x8039D160
 	.data       start:0x803CC238 end:0x803CC288
 
-JKernel.a/JKRArchivePub.o:
+libJKernel.a/JKRArchivePub.o:
 	.text       start:0x802D5778 end:0x802D6294
-	.data       start:0x803CC288 end:0x803CC2D8
 
-JKernel.a/JKRArchivePri.o:
+libJKernel.a/JKRArchivePri.o:
 	.text       start:0x802D6294 end:0x802D69B8
+	.data       start:0x803CC288 end:0x803CC2D8
 	.sbss       start:0x80451420 end:0x80451428
 
-JKernel.a/JKRMemArchive.o:
+libJKernel.a/JKRMemArchive.o:
 	.text       start:0x802D69B8 end:0x802D70C0
 	.rodata     start:0x8039D160 end:0x8039D188
 	.data       start:0x803CC2D8 end:0x803CC328
 
-JKernel.a/JKRAramArchive.o:
+libJKernel.a/JKRAramArchive.o:
 	.text       start:0x802D70C0 end:0x802D7BF0
 	.rodata     start:0x8039D188 end:0x8039D1B0
 	.data       start:0x803CC328 end:0x803CC398
 
-JKernel.a/JKRDvdArchive.o:
+libJKernel.a/JKRDvdArchive.o:
 	.text       start:0x802D7BF0 end:0x802D87D4
 	.rodata     start:0x8039D1B0 end:0x8039D220
 	.data       start:0x803CC398 end:0x803CC3E8
 
-JKernel.a/JKRCompArchive.o:
+libJKernel.a/JKRCompArchive.o:
 	.text       start:0x802D87D4 end:0x802D9518
 	.rodata     start:0x8039D220 end:0x8039D260
 	.data       start:0x803CC3E8 end:0x803CC438
 
-JKernel.a/JKRFile.o:
+libJKernel.a/JKRFile.o:
 	.text       start:0x802D9518 end:0x802D9584
 
-JKernel.a/JKRDvdFile.o:
-	.text       start:0x802D9584 end:0x802D9B98
+libJKernel.a/JKRDvdFile.o:
+	.text       start:0x802D9584 end:0x802D9B44
+	.text       start:0x802D9B44 end:0x802D9B98
 	.ctors      start:0x80373940 end:0x80373944
 	.rodata     start:0x8039D260 end:0x8039D290
 	.data       start:0x803CC438 end:0x803CC460
 	.bss        start:0x80434360 end:0x80434378
 
-JKernel.a/JKRDvdRipper.o:
-	.text       start:0x802D9B98 end:0x802DA874
+libJKernel.a/JKRDvdRipper.o:
+	.text       start:0x802D9B98 end:0x802DA820
+	.text       start:0x802DA820 end:0x802DA874
 	.ctors      start:0x80373944 end:0x80373948
 	.rodata     start:0x8039D290 end:0x8039D2F0
 	.bss        start:0x80434378 end:0x804343A8
-	.sdata      start:0x804508CC end:0x804508D4
+	.sdata      start:0x804508C8 end:0x804508D0
 	.sbss       start:0x80451428 end:0x80451468
 
-JKernel.a/JKRDvdAramRipper.o:
-	.text       start:0x802DA874 end:0x802DB680
+libJKernel.a/JKRDvdAramRipper.o:
+	.text       start:0x802DA874 end:0x802DB62C
+	.text       start:0x802DB62C end:0x802DB680
 	.ctors      start:0x80373948 end:0x8037394C
 	.bss        start:0x804343A8 end:0x804343D8
-	.sdata      start:0x804508D4 end:0x804508D8
+	.sdata      start:0x804508D0 end:0x804508D8
 	.sbss       start:0x80451468 end:0x804514B0
 
-JKernel.a/JKRDecomp.o:
+libJKernel.a/JKRDecomp.o:
 	.text       start:0x802DB680 end:0x802DBDFC
 	.data       start:0x803CC460 end:0x803CC4B0
-	.sbss       start:0x804514B0 end:0x804514BC
+	.sbss       start:0x804514B0 end:0x804514B8
 
-JSupport.a/JSUList.o:
+libJSupport.a/JSUList.o:
 	.text       start:0x802DBDFC end:0x802DC23C
 
-JSupport.a/JSUInputStream.o:
+libJSupport.a/JSUInputStream.o:
 	.text       start:0x802DC23C end:0x802DC520
 	.data       start:0x803CC4B0 end:0x803CC4F0
 
-JSupport.a/JSUMemoryStream.o:
+libJSupport.a/JSUMemoryStream.o:
 	.text       start:0x802DC520 end:0x802DC638
 	.data       start:0x803CC4F0 end:0x803CC518
 
-JSupport.a/JSUFileStream.o:
+libJSupport.a/JSUFileStream.o:
 	.text       start:0x802DC638 end:0x802DC864
 	.data       start:0x803CC518 end:0x803CC540
 
-JGadget.a/binary.o:
+libJGadget.a/binary.o:
 	.text       start:0x802DC864 end:0x802DCA1C
 
-JGadget.a/linklist.o:
+libJGadget.a/linklist.o:
 	.text       start:0x802DCA1C end:0x802DCCC8
 
-JGadget.a/std-vector.o:
+libJGadget.a/std-vector.o:
 	.text       start:0x802DCCC8 end:0x802DD188
 
-JUtility.a/JUTCacheFont.o:
+libJUtility.a/JUTCacheFont.o:
 	.text       start:0x802DD188 end:0x802DE078
 	.rodata     start:0x8039D2F0 end:0x8039D360
 	.data       start:0x803CC540 end:0x803CC590
 	.sdata2     start:0x80455FD0 end:0x80455FD8
 
-JUtility.a/JUTResource.o:
+libJUtility.a/JUTResource.o:
 	.text       start:0x802DE078 end:0x802DE234
 
-JUtility.a/JUTTexture.o:
+libJUtility.a/JUTTexture.o:
 	.text       start:0x802DE234 end:0x802DE890
 	.sdata2     start:0x80455FD8 end:0x80455FF0
 
-JUtility.a/JUTPalette.o:
+libJUtility.a/JUTPalette.o:
 	.text       start:0x802DE890 end:0x802DE9A0
 	.rodata     start:0x8039D360 end:0x8039D390
 
-JUtility.a/JUTNameTab.o:
+libJUtility.a/JUTNameTab.o:
 	.text       start:0x802DE9A0 end:0x802DEB58
 
-JUtility.a/JUTGraphFifo.o:
+libJUtility.a/JUTGraphFifo.o:
 	.text       start:0x802DEB58 end:0x802DECF8
 	.data       start:0x803CC590 end:0x803CC5A0
-	.sbss       start:0x804514BC end:0x804514C8
+	.sbss       start:0x804514B8 end:0x804514C8
 
-JUtility.a/JUTFont.o:
+libJUtility.a/JUTFont.o:
 	.text       start:0x802DECF8 end:0x802DEF48
 
-JUtility.a/JUTResFont.o:
-	.text       start:0x802DEF48 end:0x802E0148
+libJUtility.a/JUTResFont.o:
+	.text       start:0x802DEF48 end:0x802E0108
+	.text       start:0x802E0108 end:0x802E0148
 	.rodata     start:0x8039D390 end:0x8039D490
 	.data       start:0x803CC5A0 end:0x803CC5F0
 	.sdata2     start:0x80455FF0 end:0x80456008
 
-JUtility.a/JUTDbPrint.o:
+libJUtility.a/JUTDbPrint.o:
 	.text       start:0x802E0148 end:0x802E06DC
-	.sbss       start:0x804514C8 end:0x804514D4
+	.sbss       start:0x804514C8 end:0x804514D0
 	.sdata2     start:0x80456008 end:0x80456018
 
-JUtility.a/JUTGamePad.o:
+libJUtility.a/JUTGamePad.o:
 	.text       start:0x802E06DC end:0x802E1D5C
 	.ctors      start:0x8037394C end:0x80373950
 	.data       start:0x803CC5F0 end:0x803CC620
 	.bss        start:0x804343D8 end:0x80434578
 	.sdata      start:0x804508D8 end:0x804508F0
-	.sbss       start:0x804514D4 end:0x80451508
+	.sbss       start:0x804514D0 end:0x80451508
 	.sdata2     start:0x80456018 end:0x80456050
 
-JUtility.a/JUTException.o:
+libJUtility.a/JUTException.o:
 	.text       start:0x802E1D5C end:0x802E41E8
 	.ctors      start:0x80373950 end:0x80373954
 	.rodata     start:0x8039D490 end:0x8039D9A0
@@ -2493,157 +2586,160 @@ JUtility.a/JUTException.o:
 	.sbss       start:0x80451508 end:0x80451528
 	.sdata2     start:0x80456050 end:0x80456060
 
-JUtility.a/JUTDirectPrint.o:
+libJUtility.a/JUTDirectPrint.o:
 	.text       start:0x802E41E8 end:0x802E495C
 	.rodata     start:0x8039D9A0 end:0x8039D9A8
 	.data       start:0x803CC6B8 end:0x803CC980
 	.sbss       start:0x80451528 end:0x80451530
 	.sdata2     start:0x80456060 end:0x804560B8
 
-JUtility.a/JUTAssert.o:
+libJUtility.a/JUTAssert.o:
 	.text       start:0x802E495C end:0x802E4C54
 	.bss        start:0x80434870 end:0x804349B0
 	.sbss       start:0x80451530 end:0x80451538
 	.sdata2     start:0x804560B8 end:0x804560D0
 
-JUtility.a/JUTVideo.o:
+libJUtility.a/JUTVideo.o:
 	.text       start:0x802E4C54 end:0x802E5214
 	.data       start:0x803CC980 end:0x803CC990
 	.sbss       start:0x80451538 end:0x80451550
 
-JUtility.a/JUTXfb.o:
+libJUtility.a/JUTXfb.o:
 	.text       start:0x802E5214 end:0x802E5530
 	.sbss       start:0x80451550 end:0x80451558
 
-JUtility.a/JUTFader.o:
+libJUtility.a/JUTFader.o:
 	.text       start:0x802E5530 end:0x802E5888
 	.data       start:0x803CC990 end:0x803CC9A8
 	.sdata2     start:0x804560D0 end:0x804560D8
 
-JUtility.a/JUTProcBar.o:
-	.text       start:0x802E5888 end:0x802E7354
+libJUtility.a/JUTProcBar.o:
+	.text       start:0x802E5888 end:0x802E7340
+	.text       start:0x802E7340 end:0x802E7354
 	.sdata      start:0x80450900 end:0x80450908
 	.sbss       start:0x80451558 end:0x80451570
 	.sdata2     start:0x804560D8 end:0x80456118
 
-JUtility.a/JUTConsole.o:
+libJUtility.a/JUTConsole.o:
 	.text       start:0x802E7354 end:0x802E8730
 	.rodata     start:0x8039D9A8 end:0x8039DA20
 	.data       start:0x803CC9A8 end:0x803CC9B8
 	.sbss       start:0x80451570 end:0x80451580
 	.sdata2     start:0x80456118 end:0x80456148
 
-JUtility.a/JUTFontData_Ascfont_fix12.o:
-	.rodata     start:0x8039DA20 end:0x803A1B80
+libJUtility.a/JUTFontData_Ascfont_fix12.o: comment:0
+	.rodata     start:0x8039DA20 end:0x803A1B80 align:32
 
-JUtility.a/JUTDirectFile.o:
+libJUtility.a/JUTDirectFile.o:
 	.text       start:0x802E8730 end:0x802E8B08
 
-J2DGraph.a/J2DGrafContext.o:
+libJ2DGraph.a/J2DGrafContext.o:
 	.text       start:0x802E8B08 end:0x802E9670
 	.data       start:0x803CC9B8 end:0x803CC9E0
 	.sdata2     start:0x80456148 end:0x80456160
 
-J2DGraph.a/J2DOrthoGraph.o:
+libJ2DGraph.a/J2DOrthoGraph.o:
 	.text       start:0x802E9670 end:0x802E9C90
 	.data       start:0x803CC9E0 end:0x803CCA08
 	.sdata2     start:0x80456160 end:0x80456168
 
-J2DGraph.a/J2DTevs.o:
+libJ2DGraph.a/J2DTevs.o:
 	.text       start:0x802E9C90 end:0x802EA1AC
 	.rodata     start:0x803A1B80 end:0x803A1C00
 	.sdata2     start:0x80456168 end:0x804561B0
 
-J2DGraph.a/J2DMaterial.o:
+libJ2DGraph.a/J2DMaterial.o:
 	.text       start:0x802EA1AC end:0x802EB394
 	.data       start:0x803CCA08 end:0x803CCA90
 	.sdata2     start:0x804561B0 end:0x804561C0
 
-J2DGraph.a/J2DMatBlock.o:
+libJ2DGraph.a/J2DMatBlock.o:
 	.text       start:0x802EB394 end:0x802F2AD0
 	.rodata     start:0x803A1C00 end:0x803A1C10
 	.data       start:0x803CCA90 end:0x803CCF40
 
-J2DGraph.a/J2DMaterialFactory.o:
-	.text       start:0x802F2AD0 end:0x802F42F0
+libJ2DGraph.a/J2DMaterialFactory.o:
+	.text       start:0x802F2AD0 end:0x802F4170
+	.text       start:0x802F4170 end:0x802F42F0
 	.sdata2     start:0x804561C0 end:0x804561C8
 	.sbss2      start:0x80456BB0 end:0x80456BB8
 
-J2DGraph.a/J2DPrint.o:
+libJ2DGraph.a/J2DPrint.o:
 	.text       start:0x802F42F0 end:0x802F5BF8
 	.data       start:0x803CCF40 end:0x803CCFB0
 	.sbss       start:0x80451580 end:0x80451590
 	.sdata2     start:0x804561C8 end:0x804561F0
 
-J2DGraph.a/J2DPane.o:
+libJ2DGraph.a/J2DPane.o:
 	.text       start:0x802F5BF8 end:0x802F8498
 	.ctors      start:0x80373954 end:0x80373958
 	.data       start:0x803CCFB0 end:0x803CD068
 	.bss        start:0x804349B0 end:0x804349C0
 	.sdata2     start:0x804561F0 end:0x80456220
 
-J2DGraph.a/J2DScreen.o:
+libJ2DGraph.a/J2DScreen.o:
 	.text       start:0x802F8498 end:0x802F9A7C
 	.data       start:0x803CD068 end:0x803CD108
 	.sbss       start:0x80451590 end:0x80451598
 	.sdata2     start:0x80456220 end:0x80456240
 
-J2DGraph.a/J2DWindow.o:
+libJ2DGraph.a/J2DWindow.o:
 	.text       start:0x802F9A7C end:0x802FC050
 	.rodata     start:0x803A1C10 end:0x803A1C58
 	.data       start:0x803CD108 end:0x803CD1D8
 	.sdata2     start:0x80456240 end:0x80456260
 
-J2DGraph.a/J2DPicture.o:
+libJ2DGraph.a/J2DPicture.o:
 	.text       start:0x802FC050 end:0x802FF660
 	.data       start:0x803CD1D8 end:0x803CD328
 	.sdata2     start:0x80456260 end:0x80456280
 
-J2DGraph.a/J2DTextBox.o:
+libJ2DGraph.a/J2DTextBox.o:
 	.text       start:0x802FF660 end:0x80300C94
 	.rodata     start:0x803A1C58 end:0x803A1C60
 	.data       start:0x803CD328 end:0x803CD3E8
 	.sdata2     start:0x80456280 end:0x804562A0
 
-J2DGraph.a/J2DWindowEx.o:
-	.text       start:0x80300C94 end:0x80303640
+libJ2DGraph.a/J2DWindowEx.o:
+	.text       start:0x80300C94 end:0x8030363C
+	.text       start:0x8030363C end:0x80303640
 	.rodata     start:0x803A1C60 end:0x803A1D50
 	.data       start:0x803CD3E8 end:0x803CD4B8
 	.sdata2     start:0x804562A0 end:0x804562C0
 
-J2DGraph.a/J2DPictureEx.o:
+libJ2DGraph.a/J2DPictureEx.o:
 	.text       start:0x80303640 end:0x803071E4
 	.rodata     start:0x803A1D50 end:0x803A1DB8
 	.data       start:0x803CD4B8 end:0x803CD608
 	.sdata2     start:0x804562C0 end:0x804562D8
 
-J2DGraph.a/J2DTextBoxEx.o:
+libJ2DGraph.a/J2DTextBoxEx.o:
 	.text       start:0x803071E4 end:0x80308A6C
 	.rodata     start:0x803A1DB8 end:0x803A1DF8
 	.data       start:0x803CD608 end:0x803CD6C8
 	.sdata2     start:0x804562D8 end:0x804562F8
 
-J2DGraph.a/J2DAnmLoader.o:
+libJ2DGraph.a/J2DAnmLoader.o:
 	.text       start:0x80308A6C end:0x8030A590
 	.data       start:0x803CD6C8 end:0x803CD728
 	.sdata2     start:0x804562F8 end:0x80456300
 
-J2DGraph.a/J2DAnimation.o:
+libJ2DGraph.a/J2DAnimation.o:
 	.text       start:0x8030A590 end:0x8030CE18
 	.data       start:0x803CD728 end:0x803CD7E8
 	.sdata2     start:0x80456300 end:0x80456328
 
-J2DGraph.a/J2DManage.o:
+libJ2DGraph.a/J2DManage.o:
 	.text       start:0x8030CE18 end:0x8030D098
 	.bss        start:0x804349C0 end:0x80434AC8
 
-J3DGraphBase.a/J3DGD.o:
+libJ3DGraphBase.a/J3DGD.o:
 	.text       start:0x8030D098 end:0x8030FDE8
 	.data       start:0x803CD7E8 end:0x803CD8A0
 	.sdata      start:0x80450908 end:0x80450950
 	.sdata2     start:0x80456328 end:0x80456368
 
-J3DGraphBase.a/J3DSys.o:
+libJ3DGraphBase.a/J3DSys.o:
 	.text       start:0x8030FDE8 end:0x80310EF8
 	.ctors      start:0x80373958 end:0x8037395C
 	.rodata     start:0x803A1DF8 end:0x803A1E30
@@ -2653,27 +2749,27 @@ J3DGraphBase.a/J3DSys.o:
 	.sbss       start:0x80451598 end:0x804515A0
 	.sdata2     start:0x80456368 end:0x80456378
 
-J3DGraphBase.a/J3DVertex.o:
+libJ3DGraphBase.a/J3DVertex.o:
 	.text       start:0x80310EF8 end:0x80311630
 
-J3DGraphBase.a/J3DTransform.o:
+libJ3DGraphBase.a/J3DTransform.o:
 	.text       start:0x80311630 end:0x8031204C
 	.rodata     start:0x803A1E30 end:0x803A1E98
 	.data       start:0x803CD8F8 end:0x803CD900
 	.sdata      start:0x80450958 end:0x80450960
 	.sdata2     start:0x80456378 end:0x80456388
 
-J3DGraphBase.a/J3DTexture.o:
+libJ3DGraphBase.a/J3DTexture.o:
 	.text       start:0x8031204C end:0x80312488
 	.sdata2     start:0x80456388 end:0x80456398
 
-J3DGraphBase.a/J3DPacket.o:
+libJ3DGraphBase.a/J3DPacket.o:
 	.text       start:0x80312488 end:0x803130A8
 	.data       start:0x803CD900 end:0x803CD990
 	.bss        start:0x80434C70 end:0x80434C80
 	.sbss       start:0x804515A0 end:0x804515A8
 
-J3DGraphBase.a/J3DShapeMtx.o:
+libJ3DGraphBase.a/J3DShapeMtx.o:
 	.text       start:0x803130A8 end:0x80314924
 	.ctors      start:0x8037395C end:0x80373960
 	.data       start:0x803CD990 end:0x803CDC68
@@ -2681,22 +2777,22 @@ J3DGraphBase.a/J3DShapeMtx.o:
 	.sbss       start:0x804515A8 end:0x804515C8
 	.sdata2     start:0x80456398 end:0x804563A0
 
-J3DGraphBase.a/J3DShapeDraw.o:
+libJ3DGraphBase.a/J3DShapeDraw.o:
 	.text       start:0x80314924 end:0x80314B48
 	.data       start:0x803CDC68 end:0x803CDC78
 
-J3DGraphBase.a/J3DShape.o:
+libJ3DGraphBase.a/J3DShape.o:
 	.text       start:0x80314B48 end:0x803157A0
 	.rodata     start:0x803A1E98 end:0x803A1EA8
 	.data       start:0x803CDC78 end:0x803CDC90
 	.sbss       start:0x804515C8 end:0x804515D8
 	.sdata2     start:0x804563A0 end:0x804563A8
 
-J3DGraphBase.a/J3DMaterial.o:
+libJ3DGraphBase.a/J3DMaterial.o:
 	.text       start:0x803157A0 end:0x8031747C
 	.data       start:0x803CDC90 end:0x803CDF30
 
-J3DGraphBase.a/J3DMatBlock.o:
+libJ3DGraphBase.a/J3DMatBlock.o:
 	.text       start:0x8031747C end:0x80323590
 	.ctors      start:0x80373960 end:0x80373964
 	.rodata     start:0x803A1EA8 end:0x803A1EC8
@@ -2705,428 +2801,429 @@ J3DGraphBase.a/J3DMatBlock.o:
 	.sbss       start:0x804515D8 end:0x804515E0
 	.sdata2     start:0x804563A8 end:0x804563B0
 
-J3DGraphBase.a/J3DTevs.o:
+libJ3DGraphBase.a/J3DTevs.o:
 	.text       start:0x80323590 end:0x80324F08
 	.rodata     start:0x803A1EC8 end:0x803A2008
 	.data       start:0x803CEAC8 end:0x803CEBE8
 	.bss        start:0x80434C98 end:0x804371C0
 	.sdata2     start:0x804563B0 end:0x80456400
 
-J3DGraphBase.a/J3DDrawBuffer.o:
+libJ3DGraphBase.a/J3DDrawBuffer.o:
 	.text       start:0x80324F08 end:0x803256C4
 	.ctors      start:0x80373964 end:0x80373968
 	.data       start:0x803CEBE8 end:0x803CECA8
 	.sbss       start:0x804515E0 end:0x804515E8
 	.sdata2     start:0x80456400 end:0x80456410
 
-J3DGraphBase.a/J3DStruct.o:
+libJ3DGraphBase.a/J3DStruct.o:
 	.text       start:0x803256C4 end:0x803258A0
 	.sdata2     start:0x80456410 end:0x80456418
 
-J3DGraphAnimator.a/J3DShapeTable.o:
+libJ3DGraphAnimator.a/J3DShapeTable.o:
 	.text       start:0x803258A0 end:0x80325A18
 
-J3DGraphAnimator.a/J3DJointTree.o:
+libJ3DGraphAnimator.a/J3DJointTree.o:
 	.text       start:0x80325A18 end:0x80325D88
 	.data       start:0x803CECA8 end:0x803CED08
 	.sdata2     start:0x80456418 end:0x80456420
 
-J3DGraphAnimator.a/J3DModelData.o:
+libJ3DGraphAnimator.a/J3DModelData.o:
 	.text       start:0x80325D88 end:0x80326214
 	.data       start:0x803CED08 end:0x803CED20
 	.sbss       start:0x804515E8 end:0x804515F0
 
-J3DGraphAnimator.a/J3DMtxBuffer.o:
+libJ3DGraphAnimator.a/J3DMtxBuffer.o:
 	.text       start:0x80326214 end:0x80327100
 	.bss        start:0x804371C0 end:0x80437218
 	.sdata      start:0x80450970 end:0x80450980
 	.sdata2     start:0x80456420 end:0x80456428
 
-J3DGraphAnimator.a/J3DModel.o:
+libJ3DGraphAnimator.a/J3DModel.o:
 	.text       start:0x80327100 end:0x803283FC
 	.data       start:0x803CED20 end:0x803CED50
 	.sdata2     start:0x80456428 end:0x80456430
 
-J3DGraphAnimator.a/J3DAnimation.o:
+libJ3DGraphAnimator.a/J3DAnimation.o:
 	.text       start:0x803283FC end:0x8032C320
 	.data       start:0x803CED50 end:0x803CEE60
 	.sdata2     start:0x80456430 end:0x80456468
 
-J3DGraphAnimator.a/J3DMaterialAnm.o:
+libJ3DGraphAnimator.a/J3DMaterialAnm.o:
 	.text       start:0x8032C320 end:0x8032C6E4
 	.data       start:0x803CEE60 end:0x803CEE70
 
-J3DGraphAnimator.a/J3DSkinDeform.o:
+libJ3DGraphAnimator.a/J3DSkinDeform.o:
 	.text       start:0x8032C6E4 end:0x8032E1F8
 	.rodata     start:0x803A2008 end:0x803A2068
 	.data       start:0x803CEE70 end:0x803CEE80
 	.bss        start:0x80437218 end:0x80439A20
 	.sdata2     start:0x80456468 end:0x80456470
 
-J3DGraphAnimator.a/J3DCluster.o:
+libJ3DGraphAnimator.a/J3DCluster.o:
 	.text       start:0x8032E1F8 end:0x8032EC28
 	.sdata2     start:0x80456470 end:0x804564A0
 
-J3DGraphAnimator.a/J3DJoint.o:
+libJ3DGraphAnimator.a/J3DJoint.o:
 	.text       start:0x8032EC28 end:0x8032F5A8
 	.rodata     start:0x803A2068 end:0x803A2098
 	.sbss       start:0x804515F0 end:0x80451600
 	.sdata2     start:0x804564A0 end:0x804564A8
 
-J3DGraphAnimator.a/J3DMaterialAttach.o:
+libJ3DGraphAnimator.a/J3DMaterialAttach.o:
 	.text       start:0x8032F5A8 end:0x8032FFEC
 	.data       start:0x803CEE80 end:0x803CEE90
 
-J3DGraphLoader.a/J3DMaterialFactory.o:
+libJ3DGraphLoader.a/J3DMaterialFactory.o:
 	.text       start:0x8032FFEC end:0x80332DA4
 	.data       start:0x803CEE90 end:0x803CF0E8
 	.sdata2     start:0x804564A8 end:0x804564B8
 	.sbss2      start:0x80456BB8 end:0x80456BC0
 
-J3DGraphLoader.a/J3DMaterialFactory_v21.o:
+libJ3DGraphLoader.a/J3DMaterialFactory_v21.o:
 	.text       start:0x80332DA4 end:0x80334130
 	.sdata2     start:0x804564B8 end:0x804564C0
 	.sbss2      start:0x80456BC0 end:0x80456BC8
 
-J3DGraphLoader.a/J3DClusterLoader.o:
+libJ3DGraphLoader.a/J3DClusterLoader.o:
 	.text       start:0x80334130 end:0x8033468C
 	.rodata     start:0x803A2098 end:0x803A20B0
 	.data       start:0x803CF0E8 end:0x803CF108
 
-J3DGraphLoader.a/J3DModelLoader.o:
+libJ3DGraphLoader.a/J3DModelLoader.o:
 	.text       start:0x8033468C end:0x80336794
 	.rodata     start:0x803A20B0 end:0x803A20E8
 	.data       start:0x803CF108 end:0x803CF238
 
-J3DGraphLoader.a/J3DModelLoaderCalcSize.o:
+libJ3DGraphLoader.a/J3DModelLoaderCalcSize.o:
 	.text       start:0x80336794 end:0x80337178
 	.rodata     start:0x803A20E8 end:0x803A2100
 
-J3DGraphLoader.a/J3DJointFactory.o:
+libJ3DGraphLoader.a/J3DJointFactory.o:
 	.text       start:0x80337178 end:0x80337350
 
-J3DGraphLoader.a/J3DShapeFactory.o:
-	.text       start:0x80337350 end:0x80337B40
+libJ3DGraphLoader.a/J3DShapeFactory.o:
+	.text       start:0x80337350 end:0x80337AE0
+	.text       start:0x80337AE0 end:0x80337B40
 	.rodata     start:0x803A2100 end:0x803A2130
 
-J3DGraphLoader.a/J3DAnmLoader.o:
+libJ3DGraphLoader.a/J3DAnmLoader.o:
 	.text       start:0x80337B40 end:0x80339878
 	.rodata     start:0x803A2130 end:0x803A2170
 	.data       start:0x803CF238 end:0x803CF288
 	.sdata2     start:0x804564C0 end:0x804564C8
 
-JMath.a/JMath.o:
+libJMath.a/JMath.o:
 	.text       start:0x80339878 end:0x80339AE4
 	.sdata2     start:0x804564C8 end:0x804564D8
 
-JMath.a/random.o:
+libJMath.a/random.o:
 	.text       start:0x80339AE4 end:0x80339AEC
 
-JMath.a/JMATrigonometric.o:
+libJMath.a/JMATrigonometric.o:
 	.text       start:0x80339AEC end:0x80339CC0
 	.ctors      start:0x80373968 end:0x8037396C
 	.bss        start:0x80439A20 end:0x8044BA60
 	.sdata2     start:0x804564D8 end:0x80456508
 
-base.a/PPCArch.o:
+libbase.a/PPCArch.o:
 	.text       start:0x80339CC0 end:0x80339DD4
 
-os.a/OS.o:
+libos.a/OS.o:
 	.text       start:0x80339DD4 end:0x8033A8A0
 	.data       start:0x803CF288 end:0x803CF480
 	.bss        start:0x8044BA60 end:0x8044BAD0
 	.sdata      start:0x80450980 end:0x80450990
 	.sbss       start:0x80451600 end:0x80451638
 
-os.a/OSAlarm.o:
+libos.a/OSAlarm.o:
 	.text       start:0x8033A8A0 end:0x8033B078
 	.data       start:0x803CF480 end:0x803CF490
 	.sbss       start:0x80451638 end:0x80451640
 
-os.a/OSAlloc.o:
+libos.a/OSAlloc.o:
 	.text       start:0x8033B078 end:0x8033B28C
 	.sdata      start:0x80450990 end:0x80450998
 	.sbss       start:0x80451640 end:0x80451650
 
-os.a/OSArena.o:
+libos.a/OSArena.o:
 	.text       start:0x8033B28C end:0x8033B2D8
 	.sdata      start:0x80450998 end:0x804509A0
 	.sbss       start:0x80451650 end:0x80451658
 
-os.a/OSAudioSystem.o:
+libos.a/OSAudioSystem.o:
 	.text       start:0x8033B2D8 end:0x8033B56C
 	.data       start:0x803CF490 end:0x803CF510
 
-os.a/OSCache.o:
+libos.a/OSCache.o:
 	.text       start:0x8033B56C end:0x8033BBE4
 	.data       start:0x803CF510 end:0x803CF740
 
-os.a/OSContext.o:
+libos.a/OSContext.o:
 	.text       start:0x8033BBE4 end:0x8033C580
 	.data       start:0x803CF740 end:0x803CF918
 
-os.a/OSError.o:
+libos.a/OSError.o:
 	.text       start:0x8033C580 end:0x8033CA80
 	.data       start:0x803CF918 end:0x803CFC38
 	.bss        start:0x8044BAD0 end:0x8044BB20
 	.sdata      start:0x804509A0 end:0x804509A8
 
-os.a/OSExec.o:
+libos.a/OSExec.o:
 	.text       start:0x8033CA80 end:0x8033D3E0
 	.data       start:0x803CFC38 end:0x803CFC48
 	.sdata      start:0x804509A8 end:0x804509B0
 	.sbss       start:0x80451658 end:0x80451660
 
-os.a/OSFont.o:
+libos.a/OSFont.o:
 	.text       start:0x8033D3E0 end:0x8033D6F4
 	.data       start:0x803CFC48 end:0x803D0758
 	.sdata      start:0x804509B0 end:0x804509B8
 	.sbss       start:0x80451660 end:0x80451670
 
-os.a/OSInterrupt.o:
+libos.a/OSInterrupt.o:
 	.text       start:0x8033D6F4 end:0x8033DF60
 	.data       start:0x803D0758 end:0x803D0788
 	.sbss       start:0x80451670 end:0x80451688
 
-os.a/OSLink.o:
+libos.a/OSLink.o:
 	.text       start:0x8033DF60 end:0x8033E994
 	.data       start:0x803D0788 end:0x803D07D8
 
-os.a/OSMessage.o:
+libos.a/OSMessage.o:
 	.text       start:0x8033E994 end:0x8033EC6C
 
-os.a/OSMemory.o:
+libos.a/OSMemory.o:
 	.text       start:0x8033EC6C end:0x8033F008
 	.data       start:0x803D07D8 end:0x803D07E8
 
-os.a/OSMutex.o:
+libos.a/OSMutex.o:
 	.text       start:0x8033F008 end:0x8033F5D0
 
-os.a/OSReboot.o:
+libos.a/OSReboot.o:
 	.text       start:0x8033F5D0 end:0x8033F660
 	.sbss       start:0x80451688 end:0x80451690
 
-os.a/OSReset.o:
+libos.a/OSReset.o:
 	.text       start:0x8033F660 end:0x8033FAE4
 	.data       start:0x803D07E8 end:0x803D0838
 	.sbss       start:0x80451690 end:0x804516A0
 
-os.a/OSResetSW.o:
+libos.a/OSResetSW.o:
 	.text       start:0x8033FAE4 end:0x8033FE90
 	.sbss       start:0x804516A0 end:0x804516C0
 
-os.a/OSRtc.o:
+libos.a/OSRtc.o:
 	.text       start:0x8033FE90 end:0x80340A20
 	.bss        start:0x8044BB20 end:0x8044BB78
 
-os.a/OSSync.o:
+libos.a/OSSync.o:
 	.text       start:0x80340A20 end:0x80340AA4
 
-os.a/OSThread.o:
+libos.a/OSThread.o:
 	.text       start:0x80340AA4 end:0x803426FC
 	.data       start:0x803D0838 end:0x803D1048
 	.bss        start:0x8044BB78 end:0x8044C570
 	.sdata      start:0x804509B8 end:0x804509C0
 	.sbss       start:0x804516C0 end:0x804516D8
 
-os.a/OSTime.o:
+libos.a/OSTime.o:
 	.text       start:0x803426FC end:0x80342B78
 	.data       start:0x803D1048 end:0x803D10A8
 
-os.a/__ppc_eabi_init.o:
+libos.a/__ppc_eabi_init.o:
 	.text       start:0x80342B78 end:0x80342C0C
 
-exi.a/EXIBios.o:
+libexi.a/EXIBios.o:
 	.text       start:0x80342C0C end:0x803445E8
 	.data       start:0x803D10A8 end:0x803D11B8
 	.bss        start:0x8044C570 end:0x8044C630
 	.sdata      start:0x804509C0 end:0x804509C8
 	.sbss       start:0x804516D8 end:0x804516E0
 
-exi.a/EXIUart.o:
+libexi.a/EXIUart.o:
 	.text       start:0x803445E8 end:0x80344BA0
 	.sbss       start:0x804516E0 end:0x804516F0
 
-si.a/SIBios.o:
+libsi.a/SIBios.o:
 	.text       start:0x80344BA0 end:0x80346290
 	.data       start:0x803D11B8 end:0x803D12D0
 	.bss        start:0x8044C630 end:0x8044C830
 	.sdata      start:0x804509C8 end:0x804509D0
 	.sbss       start:0x804516F0 end:0x80451700
 
-si.a/SISamplingRate.o:
+libsi.a/SISamplingRate.o:
 	.text       start:0x80346290 end:0x80346398
 	.data       start:0x803D12D0 end:0x803D1368
 	.sbss       start:0x80451700 end:0x80451708
 
-db.a/db.o:
+libdb.a/db.o:
 	.text       start:0x80346398 end:0x80346484
 	.data       start:0x803D1368 end:0x803D1380
 	.sbss       start:0x80451708 end:0x80451710
 
-mtx.a/mtx.o:
+libmtx.a/mtx.o:
 	.text       start:0x80346484 end:0x80346D6C
 	.sdata      start:0x804509D0 end:0x804509D8
 	.sdata2     start:0x80456508 end:0x80456528
 
-mtx.a/mtxvec.o:
+libmtx.a/mtxvec.o:
 	.text       start:0x80346D6C end:0x80346F28
 
-mtx.a/mtx44.o:
+libmtx.a/mtx44.o:
 	.text       start:0x80346F28 end:0x80347090
 	.sdata2     start:0x80456528 end:0x80456540
 
-mtx.a/vec.o:
+libmtx.a/vec.o:
 	.text       start:0x80347090 end:0x80347418
 	.sdata2     start:0x80456540 end:0x80456550
 
-mtx.a/quat.o:
+libmtx.a/quat.o:
 	.text       start:0x80347418 end:0x80347674
 	.sdata2     start:0x80456550 end:0x80456560
 
-dvd.a/dvdlow.o:
+libdvd.a/dvdlow.o:
 	.text       start:0x80347674 end:0x803484F0
 	.bss        start:0x8044C830 end:0x8044C900
 	.sdata      start:0x804509D8 end:0x804509E0
 	.sbss       start:0x80451710 end:0x80451758
 
-dvd.a/dvdfs.o:
+libdvd.a/dvdfs.o:
 	.text       start:0x803484F0 end:0x803490EC
 	.data       start:0x803D1380 end:0x803D1520
 	.sdata      start:0x804509E0 end:0x804509E8
 	.sbss       start:0x80451758 end:0x80451778
 
-dvd.a/dvd.o:
+libdvd.a/dvd.o:
 	.text       start:0x803490EC end:0x8034B874
 	.data       start:0x803D1520 end:0x803D16A8
 	.bss        start:0x8044C900 end:0x8044C998
 	.sdata      start:0x804509E8 end:0x80450A00
 	.sbss       start:0x80451778 end:0x804517C8
 
-dvd.a/dvdqueue.o:
+libdvd.a/dvdqueue.o:
 	.text       start:0x8034B874 end:0x8034BA6C
 	.bss        start:0x8044C998 end:0x8044C9B8
 
-dvd.a/dvderror.o:
+libdvd.a/dvderror.o:
 	.text       start:0x8034BA6C end:0x8034BC04
 	.data       start:0x803D16A8 end:0x803D16F0
 
-dvd.a/dvdidutils.o:
+libdvd.a/dvdidutils.o:
 	.text       start:0x8034BC04 end:0x8034BCFC
 
-dvd.a/dvdFatal.o:
+libdvd.a/dvdFatal.o:
 	.text       start:0x8034BCFC end:0x8034BD2C
 	.sbss       start:0x804517C8 end:0x804517D0
 
-dvd.a/fstload.o:
+libdvd.a/fstload.o:
 	.text       start:0x8034BD2C end:0x8034BF6C
 	.data       start:0x803D16F0 end:0x803D1760
 	.bss        start:0x8044C9B8 end:0x8044CA28
 	.sdata      start:0x80450A00 end:0x80450A10
 	.sbss       start:0x804517D0 end:0x804517E0
 
-vi.a/vi.o:
+libvi.a/vi.o:
 	.text       start:0x8034BF6C end:0x8034DDBC
 	.data       start:0x803D1760 end:0x803D1B48
 	.bss        start:0x8044CA28 end:0x8044CB70
 	.sdata      start:0x80450A10 end:0x80450A20
 	.sbss       start:0x804517E0 end:0x80451848
 
-pad.a/Padclamp.o:
+libpad.a/Padclamp.o:
 	.text       start:0x8034DDBC end:0x8034E2B4
 	.rodata     start:0x803A2170 end:0x803A2180
 	.sdata2     start:0x80456560 end:0x80456580
 
-pad.a/Pad.o:
+libpad.a/Pad.o:
 	.text       start:0x8034E2B4 end:0x8034FC70
 	.data       start:0x803D1B48 end:0x803D1BA0
 	.bss        start:0x8044CB70 end:0x8044CBC0
 	.sdata      start:0x80450A20 end:0x80450A40
 	.sbss       start:0x80451848 end:0x80451878
 
-ai.a/ai.o:
+libai.a/ai.o:
 	.text       start:0x8034FC70 end:0x80350554
 	.data       start:0x803D1BA0 end:0x803D1BE8
 	.sdata      start:0x80450A40 end:0x80450A48
 	.sbss       start:0x80451878 end:0x804518B8
 
-ar.a/ar.o:
+libar.a/ar.o:
 	.text       start:0x80350554 end:0x80352094
 	.data       start:0x803D1BE8 end:0x803D1C30
 	.sdata      start:0x80450A48 end:0x80450A50
 	.sbss       start:0x804518B8 end:0x804518D8
 
-ar.a/arq.o:
+libar.a/arq.o:
 	.text       start:0x80352094 end:0x80352430
 	.data       start:0x803D1C30 end:0x803D1C78
 	.sdata      start:0x80450A50 end:0x80450A58
 	.sbss       start:0x804518D8 end:0x80451900
 
-dsp.a/dsp.o:
+libdsp.a/dsp.o:
 	.text       start:0x80352430 end:0x80352580
 	.data       start:0x803D1C78 end:0x803D1CF8
 	.sdata      start:0x80450A58 end:0x80450A60
 	.sbss       start:0x80451900 end:0x80451908
 
-dsp.a/dsp_debug.o:
+libdsp.a/dsp_debug.o:
 	.text       start:0x80352580 end:0x803525D0
 
-dsp.a/dsp_task.o:
+libdsp.a/dsp_task.o:
 	.text       start:0x803525D0 end:0x80352A30
 	.data       start:0x803D1CF8 end:0x803D1E38
 	.sbss       start:0x80451908 end:0x80451918
 
-card.a/CARDBios.o:
+libcard.a/CARDBios.o:
 	.text       start:0x80352A30 end:0x80353F24
 	.data       start:0x803D1E38 end:0x803D1EA0
 	.bss        start:0x8044CBC0 end:0x8044CE00
 	.sdata      start:0x80450A60 end:0x80450A68
 	.sbss       start:0x80451918 end:0x80451920
 
-card.a/CARDUnlock.o:
+libcard.a/CARDUnlock.o:
 	.text       start:0x80353F24 end:0x80355184
 	.data       start:0x803D1EA0 end:0x803D2000
 	.sdata      start:0x80450A68 end:0x80450A70
 
-card.a/CARDRdwr.o:
+libcard.a/CARDRdwr.o:
 	.text       start:0x80355184 end:0x80355414
 
-card.a/CARDBlock.o:
+libcard.a/CARDBlock.o:
 	.text       start:0x80355414 end:0x8035577C
 
-card.a/CARDDir.o:
+libcard.a/CARDDir.o:
 	.text       start:0x8035577C end:0x803559E0
 
-card.a/CARDCheck.o:
+libcard.a/CARDCheck.o:
 	.text       start:0x803559E0 end:0x80356948
 
-card.a/CARDMount.o:
+libcard.a/CARDMount.o:
 	.text       start:0x80356948 end:0x80357484
 	.data       start:0x803D2000 end:0x803D2040
 
-card.a/CARDFormat.o:
+libcard.a/CARDFormat.o:
 	.text       start:0x80357484 end:0x80357C74
 
-card.a/CARDOpen.o:
+libcard.a/CARDOpen.o:
 	.text       start:0x80357C74 end:0x80358108
 
-card.a/CARDCreate.o:
+libcard.a/CARDCreate.o:
 	.text       start:0x80358108 end:0x803584A0
 
-card.a/CARDRead.o:
+libcard.a/CARDRead.o:
 	.text       start:0x803584A0 end:0x80358914
 
-card.a/CARDWrite.o:
+libcard.a/CARDWrite.o:
 	.text       start:0x80358914 end:0x80358C90
 
-card.a/CARDStat.o:
+libcard.a/CARDStat.o:
 	.text       start:0x80358C90 end:0x80359158
 
-card.a/CARDNet.o:
+libcard.a/CARDNet.o:
 	.text       start:0x80359158 end:0x8035921C
 	.sdata      start:0x80450A70 end:0x80450A78
 
-gx.a/GXInit.o:
+libgx.a/GXInit.o:
 	.text       start:0x8035921C end:0x8035A5A8
 	.data       start:0x803D2040 end:0x803D2280
 	.bss        start:0x8044CE00 end:0x8044D430
@@ -3134,444 +3231,447 @@ gx.a/GXInit.o:
 	.sbss       start:0x80451920 end:0x80451948
 	.sdata2     start:0x80456580 end:0x804565A8
 
-gx.a/GXFifo.o:
+libgx.a/GXFifo.o:
 	.text       start:0x8035A5A8 end:0x8035AEB8
 	.sbss       start:0x80451948 end:0x80451968
 
-gx.a/GXAttr.o:
+libgx.a/GXAttr.o:
 	.text       start:0x8035AEB8 end:0x8035BE38
 	.data       start:0x803D2280 end:0x803D2448
 	.sdata      start:0x80450A80 end:0x80450A90
 
-gx.a/GXMisc.o:
+libgx.a/GXMisc.o:
 	.text       start:0x8035BE38 end:0x8035C6E4
 	.sbss       start:0x80451968 end:0x80451980
 
-gx.a/GXGeometry.o:
+libgx.a/GXGeometry.o:
 	.text       start:0x8035C6E4 end:0x8035CA04
 
-gx.a/GXFrameBuf.o:
+libgx.a/GXFrameBuf.o:
 	.text       start:0x8035CA04 end:0x8035D630
 	.data       start:0x803D2448 end:0x803D2578
 	.sdata2     start:0x804565A8 end:0x804565B8
 
-gx.a/GXLight.o:
+libgx.a/GXLight.o:
 	.text       start:0x8035D630 end:0x8035DC1C
 	.data       start:0x803D2578 end:0x803D2598
 	.sdata2     start:0x804565B8 end:0x804565E8
 
-gx.a/GXTexture.o:
+libgx.a/GXTexture.o:
 	.text       start:0x8035DC1C end:0x8035ECC0
 	.data       start:0x803D2598 end:0x803D27C0
 	.sdata      start:0x80450A90 end:0x80450AD0
 	.sdata2     start:0x804565E8 end:0x80456610
 
-gx.a/GXBump.o:
+libgx.a/GXBump.o:
 	.text       start:0x8035ECC0 end:0x8035F198
 	.sdata2     start:0x80456610 end:0x80456618
 
-gx.a/GXTev.o:
+libgx.a/GXTev.o:
 	.text       start:0x8035F198 end:0x8035F8B8
 	.data       start:0x803D27C0 end:0x803D2838
 
-gx.a/GXPixel.o:
+libgx.a/GXPixel.o:
 	.text       start:0x8035F8B8 end:0x8035FEF0
 	.data       start:0x803D2838 end:0x803D2858
 	.sdata2     start:0x80456618 end:0x80456650
 
-gx.a/GXDisplayList.o:
+libgx.a/GXDisplayList.o:
 	.text       start:0x8035FEF0 end:0x8035FF60
 
-gx.a/GXTransform.o:
+libgx.a/GXTransform.o:
 	.text       start:0x8035FF60 end:0x8036067C
 	.sdata2     start:0x80456650 end:0x80456660
 
-gx.a/GXPerf.o:
+libgx.a/GXPerf.o:
 	.text       start:0x8036067C end:0x80360F98
 	.data       start:0x803D2858 end:0x803D2948
 
-gd.a/GDBase.o:
+libgd.a/GDBase.o:
 	.text       start:0x80360F98 end:0x80361104
 	.sbss       start:0x80451980 end:0x80451988
 
-gd.a/GDGeometry.o:
+libgd.a/GDGeometry.o:
 	.text       start:0x80361104 end:0x80361B14
 	.data       start:0x803D2948 end:0x803D29B0
 
-Runtime.PPCEABI.H.a/__va_arg.o:
+libRuntime.PPCEABI.H.a/__va_arg.o:
 	.text       start:0x80361B14 end:0x80361BDC
 
-Runtime.PPCEABI.H.a/global_destructor_chain.o:
+libRuntime.PPCEABI.H.a/global_destructor_chain.o:
 	.text       start:0x80361BDC end:0x80361C3C
 	.sbss       start:0x80451988 end:0x80451990
 
-Runtime.PPCEABI.H.a/CPlusLibPPC.o:
+libRuntime.PPCEABI.H.a/CPlusLibPPC.o:
 	.text       start:0x80361C3C end:0x80361C6C
 
-Runtime.PPCEABI.H.a/NMWException.o:
+libRuntime.PPCEABI.H.a/NMWException.o:
 	extab       start:0x80005600 end:0x80005648
 	extabindex  start:0x80005660 end:0x8000569C
 	.text       start:0x80361C6C end:0x80362018
 
-Runtime.PPCEABI.H.a/ptmf.o:
+libRuntime.PPCEABI.H.a/ptmf.o:
 	.text       start:0x80362018 end:0x803620AC
 	.rodata     start:0x803A2180 end:0x803A2190
 
-Runtime.PPCEABI.H.a/runtime.o:
+libRuntime.PPCEABI.H.a/runtime.o:
 	.text       start:0x803620AC end:0x8036283C
 	.rodata     start:0x803A2190 end:0x803A21A8
 
-Runtime.PPCEABI.H.a/__init_cpp_exceptions.o:
+libRuntime.PPCEABI.H.a/__init_cpp_exceptions.o:
 	.text       start:0x8036283C end:0x803628AC
 	.ctors      start:0x803737C0 end:0x803737C4 rename:.ctors$10
 	.dtors      start:0x80373980 end:0x80373984 rename:.dtors$10
 	.dtors      start:0x80373984 end:0x80373988 rename:.dtors$15
 	.sdata      start:0x80450AD0 end:0x80450AD8
 
-Runtime.PPCEABI.H.a/Gecko_ExceptionPPC.o:
+libRuntime.PPCEABI.H.a/Gecko_ExceptionPPC.o:
 	.text       start:0x803628AC end:0x80362914
 	.bss        start:0x8044D430 end:0x8044D440
 
-Runtime.PPCEABI.H.a/GCN_mem_alloc.o:
+libRuntime.PPCEABI.H.a/GCN_Mem_Alloc.o:
 	.text       start:0x80362914 end:0x803629CC
 	.rodata     start:0x803A21A8 end:0x803A2220
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common/Src/abort_exit.o:
+libMSL_C.a/abort_exit.o:
 	.text       start:0x803629CC end:0x80362B58
 	.bss        start:0x8044D440 end:0x8044D540
-	.sbss       start:0x80451990 end:0x804519A8
+	.sbss       start:0x80451990 end:0x804519A0
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common/Src/errno.o:
-	.sbss       start:0x804519A8 end:0x804519B0
-
-MSL_C.PPCEABI.bare.H.a/MSL_Common/Src/alloc.o:
+libMSL_C.a/alloc.o:
 	.text       start:0x80362B58 end:0x8036300C
 	.rodata     start:0x803A2220 end:0x803A2238
 	.bss        start:0x8044D540 end:0x8044D578
+	.sbss       start:0x804519A0 end:0x804519A8
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common/Src/ansi_files.o:
+libMSL_C.a/errno.o:
+	.sbss       start:0x804519A8 end:0x804519B0
+
+libMSL_C.a/ansi_files.o:
 	.text       start:0x8036300C end:0x80363124
 	.data       start:0x803D29B0 end:0x803D2AF0
 	.bss        start:0x8044D578 end:0x8044D878
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common_Embedded/Src/ansi_fp.o:
+libMSL_C.a/ansi_fp.o:
 	.text       start:0x80363124 end:0x80365078
 	.rodata     start:0x803A2238 end:0x803A2318
 	.data       start:0x803D2AF0 end:0x803D2C18
 	.sdata2     start:0x80456660 end:0x80456668
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common/Src/arith.o:
+libMSL_C.a/arith.o:
 	.text       start:0x80365078 end:0x803650E0
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common/Src/buffer_io.o:
+libMSL_C.a/buffer_io.o:
 	.text       start:0x803650E0 end:0x803651D8
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common/Src/char_io.o:
+libMSL_C.a/char_io.o:
 	.text       start:0x803651D8 end:0x80365464
 
-MSL_C.PPCEABI.bare.H.a/PPC_EABI/SRC/critical_regions.gamecube.o:
+libMSL_C.a/critical_regions.gamecube.o:
 	.text       start:0x80365464 end:0x80365470
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common/Src/ctype.o:
+libMSL_C.a/ctype.o:
 	.text       start:0x80365470 end:0x80365494
 	.data       start:0x803D2C18 end:0x803D2F18
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common/Src/direct_io.o:
+libMSL_C.a/direct_io.o:
 	.text       start:0x80365494 end:0x8036581C
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common/Src/file_io.o:
+libMSL_C.a/file_io.o:
 	.text       start:0x8036581C end:0x80365BB4
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common/Src/FILE_POS.o:
+libMSL_C.a/FILE_POS.o:
 	.text       start:0x80365BB4 end:0x80365F74
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common/Src/mbstring.o:
+libMSL_C.a/mbstring.o:
 	.text       start:0x80365F74 end:0x8036608C
 	.sdata2     start:0x80456668 end:0x80456670
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common/Src/mem.o:
+libMSL_C.a/mem.o:
 	.text       start:0x8036608C end:0x803661FC
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common/Src/mem_funcs.o:
+libMSL_C.a/mem_funcs.o:
 	.text       start:0x803661FC end:0x803664CC
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common/Src/misc_io.o:
+libMSL_C.a/misc_io.o:
 	.text       start:0x803664CC end:0x803664DC
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common/Src/printf.o:
+libMSL_C.a/printf.o:
 	.text       start:0x803664DC end:0x8036878C
 	.rodata     start:0x803A2318 end:0x803A2340
 	.data       start:0x803D2F18 end:0x803D3148
 	.sdata      start:0x80450AD8 end:0x80450AE0
 	.sdata2     start:0x80456670 end:0x80456678
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common/Src/float.o:
-	.sdata      start:0x80450AE0 end:0x80450AF4
+libMSL_C.a/float.o:
+	.sdata      start:0x80450AE0 end:0x80450AF0
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common/Src/scanf.o:
+libMSL_C.a/scanf.o:
 	.text       start:0x8036878C end:0x8036881C
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common/Src/signal.o:
+libMSL_C.a/signal.o:
 	.text       start:0x8036881C end:0x803688DC
 	.bss        start:0x8044D878 end:0x8044D890
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common/Src/string.o:
+libMSL_C.a/string.o:
 	.text       start:0x803688DC end:0x80368C00
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common/Src/strtoul.o:
+libMSL_C.a/strtoul.o:
 	.text       start:0x80368C00 end:0x80369114
 	.data       start:0x803D3148 end:0x803D3190
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common/Src/wchar_io.o:
+libMSL_C.a/wchar_io.o:
 	.text       start:0x80369114 end:0x8036919C
 
-MSL_C.PPCEABI.bare.H.a/PPC_EABI/SRC/uart_console_io_gcn.o:
+libMSL_C.a/uart_console_io_gcn.o:
 	.text       start:0x8036919C end:0x80369274
 	.sbss       start:0x804519B0 end:0x804519B8
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common_Embedded/Math/Double_precision/e_acos.o:
+libMSL_C.a/e_acos.o:
 	.text       start:0x80369274 end:0x803694B0
 	.sdata2     start:0x80456678 end:0x80456700
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common_Embedded/Math/Double_precision/e_asin.o:
+libMSL_C.a/e_asin.o:
 	.text       start:0x803694B0 end:0x803696E8
 	.sdata2     start:0x80456700 end:0x80456788
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common_Embedded/Math/Double_precision/e_atan2.o:
+libMSL_C.a/e_atan2.o:
 	.text       start:0x803696E8 end:0x80369978
 	.sdata2     start:0x80456788 end:0x804567E0
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common_Embedded/Math/Double_precision/e_exp.o:
+libMSL_C.a/e_exp.o:
 	.text       start:0x80369978 end:0x80369B9C
 	.rodata     start:0x803A2340 end:0x803A2370
 	.sdata2     start:0x804567E0 end:0x80456858
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common_Embedded/Math/Double_precision/e_fmod.o:
+libMSL_C.a/e_fmod.o:
 	.text       start:0x80369B9C end:0x80369ED8
 	.rodata     start:0x803A2370 end:0x803A2380
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common_Embedded/Math/Double_precision/e_pow.o:
+libMSL_C.a/e_pow.o:
 	.text       start:0x80369ED8 end:0x8036A708
 	.rodata     start:0x803A2380 end:0x803A23B0
 	.sdata2     start:0x80456858 end:0x80456968
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common_Embedded/Math/Double_precision/e_rem_pio2.o:
+libMSL_C.a/e_rem_pio2.o:
 	.text       start:0x8036A708 end:0x8036AAA8
 	.rodata     start:0x803A23B0 end:0x803A2538
 	.sdata2     start:0x80456968 end:0x804569C0
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common_Embedded/Math/Double_precision/k_cos.o:
+libMSL_C.a/k_cos.o:
 	.text       start:0x8036AAA8 end:0x8036AB9C
 	.sdata2     start:0x804569C0 end:0x80456A08
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common_Embedded/Math/Double_precision/k_rem_pio2.o:
+libMSL_C.a/k_rem_pio2.o:
 	.text       start:0x8036AB9C end:0x8036B9F0
 	.rodata     start:0x803A2538 end:0x803A2588
 	.sdata2     start:0x80456A08 end:0x80456A48
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common_Embedded/Math/Double_precision/k_sin.o:
+libMSL_C.a/k_sin.o:
 	.text       start:0x8036B9F0 end:0x8036BA90
 	.sdata2     start:0x80456A48 end:0x80456A80
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common_Embedded/Math/Double_precision/k_tan.o:
+libMSL_C.a/k_tan.o:
 	.text       start:0x8036BA90 end:0x8036BCA4
 	.rodata     start:0x803A2588 end:0x803A25F0
 	.sdata2     start:0x80456A80 end:0x80456AB8
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common_Embedded/Math/Double_precision/s_atan.o:
+libMSL_C.a/s_atan.o:
 	.text       start:0x8036BCA4 end:0x8036BEBC
 	.rodata     start:0x803A25F0 end:0x803A2688
 	.sdata2     start:0x80456AB8 end:0x80456AE0
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common_Embedded/Math/Double_precision/s_ceil.o:
+libMSL_C.a/s_ceil.o:
 	.text       start:0x8036BEBC end:0x8036C000
 	.sdata2     start:0x80456AE0 end:0x80456AF0
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common_Embedded/Math/Double_precision/s_copysign.o:
+libMSL_C.a/s_copysign.o:
 	.text       start:0x8036C000 end:0x8036C028
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common_Embedded/Math/Double_precision/s_cos.o:
+libMSL_C.a/s_cos.o:
 	.text       start:0x8036C028 end:0x8036C0FC
 	.sdata2     start:0x80456AF0 end:0x80456AF8
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common_Embedded/Math/Double_precision/s_floor.o:
+libMSL_C.a/s_floor.o:
 	.text       start:0x8036C0FC end:0x8036C244
 	.sdata2     start:0x80456AF8 end:0x80456B08
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common_Embedded/Math/Double_precision/s_frexp.o:
+libMSL_C.a/s_frexp.o:
 	.text       start:0x8036C244 end:0x8036C2D0
 	.sdata2     start:0x80456B08 end:0x80456B10
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common_Embedded/Math/Double_precision/s_ldexp.o:
+libMSL_C.a/s_ldexp.o:
 	.text       start:0x8036C2D0 end:0x8036C494
 	.sdata2     start:0x80456B10 end:0x80456B38
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common_Embedded/Math/Double_precision/s_modf.o:
+libMSL_C.a/s_modf.o:
 	.text       start:0x8036C494 end:0x8036C590
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common_Embedded/Math/Double_precision/s_sin.o:
+libMSL_C.a/s_sin.o:
 	.text       start:0x8036C590 end:0x8036C668
 	.sdata2     start:0x80456B38 end:0x80456B40
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common_Embedded/Math/Double_precision/s_tan.o:
+libMSL_C.a/s_tan.o:
 	.text       start:0x8036C668 end:0x8036C6E0
 	.sdata2     start:0x80456B40 end:0x80456B48
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common_Embedded/Math/Double_precision/w_acos.o:
+libMSL_C.a/w_acos.o:
 	.text       start:0x8036C6E0 end:0x8036C700
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common_Embedded/Math/Double_precision/w_asin.o:
+libMSL_C.a/w_asin.o:
 	.text       start:0x8036C700 end:0x8036C720
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common_Embedded/Math/Double_precision/w_atan2.o:
+libMSL_C.a/w_atan2.o:
 	.text       start:0x8036C720 end:0x8036C740
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common_Embedded/Math/Double_precision/w_exp.o:
+libMSL_C.a/w_exp.o:
 	.text       start:0x8036C740 end:0x8036C760
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common_Embedded/Math/Double_precision/w_fmod.o:
+libMSL_C.a/w_fmod.o:
 	.text       start:0x8036C760 end:0x8036C780
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common_Embedded/Math/Double_precision/w_pow.o:
+libMSL_C.a/w_pow.o:
 	.text       start:0x8036C780 end:0x8036C7A0
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common_Embedded/Math/Double_precision/e_sqrt.o:
+libMSL_C.a/e_sqrt.o:
 	.text       start:0x8036C7A0 end:0x8036C9C4
 	.sdata2     start:0x80456B48 end:0x80456B50
 
-MSL_C.PPCEABI.bare.H.a/PPC_EABI/SRC/math_ppc.o:
+libMSL_C.a/math_ppc.o:
 	.text       start:0x8036C9C4 end:0x8036CA54
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common_Embedded/Math/Double_precision/w_sqrt.o:
+libMSL_C.a/w_sqrt.o:
 	.text       start:0x8036CA54 end:0x8036CA74
 
-MSL_C.PPCEABI.bare.H.a/MSL_Common/Src/extras.o:
+libMSL_C.a/extras.o:
 	.text       start:0x8036CA74 end:0x8036CB20
 
-TRK_MINNOW_DOLPHIN.a/debugger/embedded/MetroTRK/Portable/mainloop.o:
+libTRK_MINNOW_DOLPHIN.a/mainloop.o:
 	.text       start:0x8036CB20 end:0x8036CC18
 
-TRK_MINNOW_DOLPHIN.a/debugger/embedded/MetroTRK/Portable/nubevent.o:
+libTRK_MINNOW_DOLPHIN.a/nubevent.o:
 	.text       start:0x8036CC18 end:0x8036CE40
 	.bss        start:0x8044D890 end:0x8044D8B8
 
-TRK_MINNOW_DOLPHIN.a/debugger/embedded/MetroTRK/Portable/nubinit.o:
+libTRK_MINNOW_DOLPHIN.a/nubinit.o:
 	.text       start:0x8036CE40 end:0x8036CFD8
 	.rodata     start:0x803A2688 end:0x803A26B8
 	.bss        start:0x8044D8B8 end:0x8044D8C0
 
-TRK_MINNOW_DOLPHIN.a/debugger/embedded/MetroTRK/Portable/msg.o:
+libTRK_MINNOW_DOLPHIN.a/msg.o:
 	.text       start:0x8036CFD8 end:0x8036D01C
 	.rodata     start:0x803A26B8 end:0x803A26E0
 
-TRK_MINNOW_DOLPHIN.a/debugger/embedded/MetroTRK/Portable/msgbuf.o:
+libTRK_MINNOW_DOLPHIN.a/msgbuf.o:
 	.text       start:0x8036D01C end:0x8036D858
 	.rodata     start:0x803A26E0 end:0x803A2700
 	.bss        start:0x8044D8C0 end:0x8044F270
 
-TRK_MINNOW_DOLPHIN.a/debugger/embedded/MetroTRK/Portable/serpoll.o:
+libTRK_MINNOW_DOLPHIN.a/serpoll.o:
 	.text       start:0x8036D858 end:0x8036DB10
 	.rodata     start:0x803A2700 end:0x803A2890
 	.bss        start:0x8044F270 end:0x8044F288
 	.sbss       start:0x804519B8 end:0x804519C0
 
-TRK_MINNOW_DOLPHIN.a/debugger/embedded/MetroTRK/Os/dolphin/usr_put.o:
+libTRK_MINNOW_DOLPHIN.a/usr_put.o:
 	.text       start:0x8036DB10 end:0x8036DB9C
 
-TRK_MINNOW_DOLPHIN.a/debugger/embedded/MetroTRK/Portable/dispatch.o:
+libTRK_MINNOW_DOLPHIN.a/dispatch.o:
 	.text       start:0x8036DB9C end:0x8036DD14
 	.rodata     start:0x803A2890 end:0x803A28D0
 	.data       start:0x803D3190 end:0x803D3200
 
-TRK_MINNOW_DOLPHIN.a/debugger/embedded/MetroTRK/Portable/msghndlr.o:
+libTRK_MINNOW_DOLPHIN.a/msghndlr.o:
 	.text       start:0x8036DD14 end:0x8036ED84
 	.rodata     start:0x803A28D0 end:0x803A2AB8
 	.data       start:0x803D3200 end:0x803D3238
 	.bss        start:0x8044F288 end:0x8044F290
 
-TRK_MINNOW_DOLPHIN.a/debugger/embedded/MetroTRK/Portable/support.o:
+libTRK_MINNOW_DOLPHIN.a/support.o:
 	.text       start:0x8036ED84 end:0x8036F498
 	.rodata     start:0x803A2AB8 end:0x803A2B60
 
-TRK_MINNOW_DOLPHIN.a/debugger/embedded/MetroTRK/Portable/mutex_TRK.o:
+libTRK_MINNOW_DOLPHIN.a/mutex_TRK.o:
 	.text       start:0x8036F498 end:0x8036F4B0
 
-TRK_MINNOW_DOLPHIN.a/debugger/embedded/MetroTRK/Portable/notify.o:
+libTRK_MINNOW_DOLPHIN.a/notify.o:
 	.text       start:0x8036F4B0 end:0x8036F548
 
-TRK_MINNOW_DOLPHIN.a/debugger/embedded/MetroTRK/Processor/ppc/Generic/flush_cache.o:
+libTRK_MINNOW_DOLPHIN.a/flush_cache.o:
 	.text       start:0x8036F548 end:0x8036F580
 
-TRK_MINNOW_DOLPHIN.a/debugger/embedded/MetroTRK/Portable/mem_TRK.o:
+libTRK_MINNOW_DOLPHIN.a/mem_TRK.o:
 	.text       start:0x8036F580 end:0x8036F638
 
-TRK_MINNOW_DOLPHIN.a/debugger/embedded/MetroTRK/Processor/ppc/Generic/targimpl.o:
+libTRK_MINNOW_DOLPHIN.a/targimpl.o:
 	.text       start:0x8036F638 end:0x803711D0
 	.rodata     start:0x803A2B60 end:0x803A2BF8
 	.data       start:0x803D3238 end:0x803D3268
 	.bss        start:0x8044F290 end:0x8044F810
 
-TRK_MINNOW_DOLPHIN.a/debugger/embedded/MetroTRK/Processor/ppc/Export/targsupp.o:
+libTRK_MINNOW_DOLPHIN.a/targsupp.o:
 	.text       start:0x803711D0 end:0x803711F0
 
-TRK_MINNOW_DOLPHIN.a/debugger/embedded/MetroTRK/Processor/ppc/Generic/mpc_7xx_603e.o:
+libTRK_MINNOW_DOLPHIN.a/mpc_7xx_603e.o:
 	.text       start:0x803711F0 end:0x80371560
 
-TRK_MINNOW_DOLPHIN.a/debugger/embedded/MetroTRK/Os/dolphin/dolphin_trk.o:
+libTRK_MINNOW_DOLPHIN.a/dolphin_trk.o:
 	.text       start:0x80371560 end:0x80371B9C
 	.data       start:0x803D3268 end:0x803D32A8
 	.bss        start:0x8044F810 end:0x8044F818
 
-TRK_MINNOW_DOLPHIN.a/debugger/embedded/MetroTRK/Portable/main_TRK.o:
+libTRK_MINNOW_DOLPHIN.a/main_TRK.o:
 	.text       start:0x80371B9C end:0x80371BF4
 	.rodata     start:0x803A2BF8 end:0x803A2C08
-	.bss        start:0x8044F818 end:0x8044F824
+	.bss        start:0x8044F818 end:0x8044F820
 
-TRK_MINNOW_DOLPHIN.a/debugger/embedded/MetroTRK/Os/dolphin/dolphin_trk_glue.o:
+libTRK_MINNOW_DOLPHIN.a/dolphin_trk_glue.o:
 	.text       start:0x80371BF4 end:0x8037214C
 	.rodata     start:0x803A2C08 end:0x803A2D10
 	.data       start:0x803D32A8 end:0x803D32D0
-	.bss        start:0x8044F824 end:0x8044F830
+	.bss        start:0x8044F820 end:0x8044F828
 
-TRK_MINNOW_DOLPHIN.a/debugger/embedded/MetroTRK/Os/dolphin/targcont.o:
+libTRK_MINNOW_DOLPHIN.a/targcont.o:
 	.text       start:0x8037214C end:0x80372180
 
-TRK_MINNOW_DOLPHIN.a/debugger/embedded/MetroTRK/Os/dolphin/target_options.o:
+libTRK_MINNOW_DOLPHIN.a/target_options.o:
 	.text       start:0x80372180 end:0x8037219C
+	.bss        start:0x8044F828 end:0x8044F830
 
-TRK_MINNOW_DOLPHIN.a/debugger/embedded/MetroTRK/Export/mslsupp.o:
+libTRK_MINNOW_DOLPHIN.a/mslsupp.o:
 	.text       start:0x8037219C end:0x80372314
 
-TRK_MINNOW_DOLPHIN.a/debugger/embedded/MetroTRK/Os/dolphin/UDP_Stubs.o:
+libTRK_MINNOW_DOLPHIN.a/UDP_Stubs.o:
 	.text       start:0x80372314 end:0x8037235C
 
-TRK_MINNOW_DOLPHIN.a/gamedev/cust_connection/cc/exi2/GCN/EXI2_DDH_GCN/main.o:
+libTRK_MINNOW_DOLPHIN.a/main_ddh.o:
 	.text       start:0x8037235C end:0x803726A0
 	.rodata     start:0x803A2D10 end:0x803A2DF0
 	.bss        start:0x8044F830 end:0x80450050
 	.sbss       start:0x804519C0 end:0x804519C8
 
-TRK_MINNOW_DOLPHIN.a/gamedev/cust_connection/utils/common/CircleBuffer.o:
+libTRK_MINNOW_DOLPHIN.a/CircleBuffer.o:
 	.text       start:0x803726A0 end:0x80372908
 
-TRK_MINNOW_DOLPHIN.a/gamedev/cust_connection/cc/exi2/GCN/EXI2_GDEV_GCN/main.o:
+libTRK_MINNOW_DOLPHIN.a/main_gdev.o:
 	.text       start:0x80372908 end:0x80372C54
 	.rodata     start:0x803A2DF0 end:0x803A2ED0
 	.bss        start:0x80450050 end:0x8045056C
 	.sbss       start:0x804519C8 end:0x804519D0
 
-TRK_MINNOW_DOLPHIN.a/gamedev/cust_connection/utils/common/MWTrace.o:
+libTRK_MINNOW_DOLPHIN.a/MWTrace.o:
 	.text       start:0x80372C54 end:0x80372CA4
 
-TRK_MINNOW_DOLPHIN.a/gamedev/cust_connection/utils/gc/MWCriticalSection_gc.o:
+libTRK_MINNOW_DOLPHIN.a/MWCriticalSection_gc.o:
 	.text       start:0x80372CA4 end:0x80372CFC
 
-amcstubs.a/AmcExi2Stubs.o:
+libamcstubs.a/AmcExi2Stubs.o:
 	.text       start:0x80372CFC end:0x80372D2C
 
-odemuexi2.a/DebuggerDriver.o:
+libodemuexi2.a/DebuggerDriver.o:
 	.text       start:0x80372D2C end:0x803737AC
+	.sdata      start:0x80450AF0 end:0x80450AF4
 	.sbss       start:0x804519D0 end:0x804519E8
 
-odenotstub.a/odenotstub.o:
+libodenotstub.a/odenotstub.o:
 	.text       start:0x803737AC end:0x803737B4

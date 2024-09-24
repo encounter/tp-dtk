@@ -13,3 +13,4 @@ d_a_door_bossL1.o:
 	.text       start:0x00000078 end:0x00002CEC
 	.rodata     start:0x00000000 end:0x000003E4
 	.data       start:0x00000000 end:0x000002AC
+	.bss        start:0x00000000 end:0x00000004
